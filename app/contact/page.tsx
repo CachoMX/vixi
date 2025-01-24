@@ -30,7 +30,7 @@ export default function Contact() {
   }
 
 
-const handleSubmit = async (e) => {
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   e.preventDefault()
   setStatus({ submitting: true, submitted: false, error: null })
 

@@ -62,7 +62,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             service: '',
             message: ''
         })
-    } catch (error) {
+    } catch (error: any) {  // or be more specific with the error type
         console.error('Form submission error:', error)
         setStatus({
             submitting: false,

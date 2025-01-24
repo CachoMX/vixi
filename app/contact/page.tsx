@@ -21,57 +21,55 @@ export default function Contact() {
     error: null
   })
 
-  const handleChange = (e) => {
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
-  }
+}
 
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setStatus({ submitting: true, submitted: false, error: null })
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  e.preventDefault()
-  setStatus({ submitting: true, submitted: false, error: null })
+    try {
+        const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
 
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
+        const data = await res.json()
 
-    const data = await res.json()
+        if (!res.ok) {
+            throw new Error(data.details || 'Failed to send message')
+        }
 
-    if (!res.ok) {
-      throw new Error(data.details || 'Failed to send message')
+        setStatus({
+            submitting: false,
+            submitted: true,
+            error: null
+        })
+        
+        setFormData({
+            fullName: '',
+            companyName: '',
+            email: '',
+            phone: '',
+            service: '',
+            message: ''
+        })
+    } catch (error) {
+        console.error('Form submission error:', error)
+        setStatus({
+            submitting: false,
+            submitted: false,
+            error: error.message || 'Failed to send message. Please try again.'
+        })
     }
-
-    setStatus({
-      submitting: false,
-      submitted: true,
-      error: null
-    })
-    
-    // Clear form
-    setFormData({
-      fullName: '',
-      companyName: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    })
-  } catch (error) {
-    console.error('Form submission error:', error)
-    setStatus({
-      submitting: false,
-      submitted: false,
-      error: error.message || 'Failed to send message. Please try again.'
-    })
-  }
 }
 
   return (

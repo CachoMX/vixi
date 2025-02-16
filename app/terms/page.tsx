@@ -172,11 +172,11 @@ export default function TermsOfService() {
                 <span>Vixi LLC</span><br />
                 <span>Dallas, TX</span><br />
                 <span>Email: </span>
-                <a href="mailto:info@vixi.agency" className="text-blue-600 hover:text-blue-800">
+                <a href="mailto:info@vixi.agency" className="text-secondary-blue hover:text-blue-800">
                   <span>info@vixi.agency</span>
                 </a><br />
                 <span>Phone: </span>
-                <a href="tel:2144995629" className="text-blue-600 hover:text-blue-800">
+                <a href="tel:2144995629" className="text-secondary-blue hover:text-blue-800">
                   <span>(214) 499-5629</span>
                 </a>
               </p>

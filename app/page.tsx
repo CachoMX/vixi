@@ -2,31 +2,32 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Phone, Mail, Award, ArrowRight, Check, BarChart, Globe, Palette, Target, Users, Zap } from 'lucide-react'
+import { AnimatedSection } from "@/components/animated-section"
+import { Counter } from "@/components/counter"
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section with Padding for Fixed Header */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white pt-32 pb-24">
+      <section className="relative bg-gradient-to-r from-primary-blue to-secondary-blue text-white pt-32 pb-24">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-5xl font-bold mb-6 animate-fade-in">
               <span>Transform Your Digital Presence with Expert Solutions</span>
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 animate-fade-in stagger-1">
               <span>Dallas's Premier Full-Service Digital Agency: Web Development, Social Media, Advertising & Design</span>
             </p>
-            <div className="flex gap-4">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                <span>(214) 499-5629</span>
-              </Button>
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                <span>Get Started</span>
+            <div className="flex gap-4 animate-fade-in stagger-2">
+              <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
+              <Link href="/contact">
+                <span>Contact Us</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              </Link>
+            </Button>
             </div>
-            <div className="flex items-center gap-6 mt-8 text-sm">
+            <div className="flex items-center gap-6 mt-8 text-sm animate-fade-in stagger-3">
               <div className="flex items-center">
                 <Award className="h-5 w-5 mr-2" />
                 <span>Full-Service Agency</span>
@@ -45,29 +46,42 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
+      <AnimatedSection>
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+          {/* Text Content */}
+          <div>
             <h2 className="text-3xl font-bold mb-6">
               <span>Your Partner in Digital Excellence</span>
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-6">
               <span>At Vixi, we combine creativity with data-driven strategies to deliver exceptional digital solutions that help businesses thrive in today's competitive landscape.</span>
             </p>
           </div>
+          
+          {/* Image Section */}
+          <div className="flex justify-center">
+            <img 
+              src="/images/chess-figure-on-chessboard-strategy-management-2023-11-27-05-37-19-utc.jpg" 
+              alt="Strategic Chess Piece" 
+              className="max-w-full rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Services Section */}
+      <AnimatedSection>
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             <span>Comprehensive Digital Solutions</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Globe className="h-10 w-10 text-blue-600 mb-4" />
+                <Globe className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
                 <CardTitle><span>Website Development</span></CardTitle>
                 <CardDescription>
                   <span>Custom-built websites that convert visitors into customers</span>
@@ -91,9 +105,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Users className="h-10 w-10 text-blue-600 mb-4" />
+                <Users className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
                 <CardTitle><span>Social Media</span></CardTitle>
                 <CardDescription>
                   <span>End-to-end social media management</span>
@@ -117,9 +131,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Target className="h-10 w-10 text-blue-600 mb-4" />
+                <Target className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110"/>
                 <CardTitle><span>Digital Advertising</span></CardTitle>
                 <CardDescription>
                   <span>Multi-platform campaign management</span>
@@ -143,9 +157,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Palette className="h-10 w-10 text-blue-600 mb-4" />
+                <Palette className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
                 <CardTitle><span>Graphic Design</span></CardTitle>
                 <CardDescription>
                   <span>Professional creative services</span>
@@ -171,17 +185,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Why Choose Us Section */}
+      <AnimatedSection>
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             <span>Why Choose Vixi</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Zap className="h-10 w-10 text-blue-600 mb-4" />
+                <Zap className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110"/>
                 <CardTitle><span>Expert Team</span></CardTitle>
                 <CardDescription>
                   <span>Our certified professionals bring years of experience across all digital platforms</span>
@@ -189,9 +205,9 @@ export default function Home() {
               </CardHeader>
             </Card>
 
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Target className="h-10 w-10 text-blue-600 mb-4" />
+                <Target className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
                 <CardTitle><span>Data-Driven Approach</span></CardTitle>
                 <CardDescription>
                   <span>We make decisions based on real data and measurable results</span>
@@ -199,9 +215,9 @@ export default function Home() {
               </CardHeader>
             </Card>
 
-            <Card>
+            <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
-                <Users className="h-10 w-10 text-blue-600 mb-4" />
+                <Users className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
                 <CardTitle><span>Dedicated Support</span></CardTitle>
                 <CardDescription>
                   <span>Direct access to your team of experts whenever you need us</span>
@@ -211,7 +227,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
+
       {/* Hyros Expertise Section */}
+      <AnimatedSection>
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div>
@@ -223,7 +242,7 @@ export default function Home() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
+              <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
                   <CardTitle><span>Enhanced Tracking Integration</span></CardTitle>
                   <CardDescription>
@@ -252,7 +271,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
                   <CardTitle><span>Performance Benefits</span></CardTitle>
                   <CardDescription>
@@ -282,13 +301,13 @@ export default function Home() {
               </Card>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm border">
+            <div className="bg-white p-8 rounded-lg shadow-sm border hover-scale transition-all duration-300 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-4 text-center">
                 <span>Why Choose Our Hyros Integration Services?</span>
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <Target className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                  <Target className="h-8 w-8 text-secondary-blue mx-auto mb-3" />
                   <h4 className="font-semibold mb-2">
                     <span>Precise Attribution</span>
                   </h4>
@@ -297,7 +316,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-center">
-                  <BarChart className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                  <BarChart className="h-8 w-8 text-secondary-blue mx-auto mb-3" />
                   <h4 className="font-semibold mb-2">
                     <span>Data-Driven Decisions</span>
                   </h4>
@@ -306,7 +325,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-center">
-                  <Zap className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                  <Zap className="h-8 w-8 text-secondary-blue mx-auto mb-3" />
                   <h4 className="font-semibold mb-2">
                     <span>Optimization Expertise</span>
                   </h4>
@@ -319,8 +338,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Automation Solutions Section */}
+      <AnimatedSection>
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div>
@@ -332,7 +353,7 @@ export default function Home() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
+              <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
                   <CardTitle><span>Zapier Integration</span></CardTitle>
                   <CardDescription>
@@ -361,7 +382,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
                   <CardTitle><span>Make (Integromat)</span></CardTitle>
                   <CardDescription>
@@ -391,7 +412,7 @@ export default function Home() {
               </Card>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm border">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm border hover-scale transition-all duration-300 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-6 text-center">
                 <span>Common Automation Use Cases</span>
               </h3>
@@ -433,45 +454,65 @@ export default function Home() {
               <p className="text-lg text-gray-600 mb-6">
                 <span>Whether you need simple task automation or complex multi-step workflows, we can build the perfect solution for your business needs.</span>
               </p>
-              <Button className="bg-blue-900 hover:bg-blue-800">
+              <Button className="bg-primary-blue hover:bg-primary-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-lg " asChild>
+              <Link href="/contact">
                 <span>Discuss Your Automation Needs</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
+      </AnimatedSection>
+      {/* Statistics Section */}
+      <AnimatedSection>
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div>
+                <Counter end={500} suffix="+" />
+                <p className="text-gray-600 mt-2">Projects Completed</p>
+              </div>
+              <div>
+                <Counter end={98} suffix="%" />
+                <p className="text-gray-600 mt-2">Client Satisfaction</p>
+              </div>
+              <div>
+                <Counter end={150} suffix="M+" />
+                <p className="text-gray-600 mt-2">Ad Impressions</p>
+              </div>
+              <div>
+                <Counter end={200} suffix="%" />
+                <p className="text-gray-600 mt-2">Average ROI</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            <span>Ready to Transform Your Digital Presence?</span>
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            <span>Contact us today to discuss how we can help achieve your business goals. Our team of experts is ready to create a customized solution for your needs.</span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              <a href="tel:2144995629">
-                <span>(214) 499-5629</span>
-              </a>
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-white text-blue-900 hover:bg-gray-100" // Changed from variant="outline"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              <a href="mailto:sales@vixi.agency">
-                <span>sales@vixi.agency</span>
-              </a>
+      <AnimatedSection>
+        <section className="py-20 bg-primary-blue text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              <span>Ready to Transform Your Digital Presence?</span>
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              <span>Contact us today to discuss how we can help achieve your business goals. Our team of experts is ready to create a customized solution for your needs.</span>
+            </p>
+            <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
+              <Link href="/contact">
+                <span>Contact Us</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* Platforms Section */}
+      <AnimatedSection>
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4">
@@ -482,7 +523,10 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {['Google Ads', 'Facebook Ads', 'TikTok', 'LinkedIn', 'Pinterest', 'X (Twitter)', 'Snapchat', 'Bing Ads'].map((platform) => (
-              <div key={platform} className="p-4 rounded-lg border bg-white shadow-sm">
+              <div 
+                key={platform} 
+                className="p-4 rounded-lg border bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary-blue hover:-translate-y-1"
+              >
                 <p className="font-semibold text-gray-800">
                   <span>{platform}</span>
                 </p>
@@ -491,6 +535,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
     </main>
   )
 }

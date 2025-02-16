@@ -1,20 +1,8 @@
 // app/services/page.tsx
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
-import { 
-  Phone, 
-  Mail, 
-  Globe, 
-  Users, 
-  Target, 
-  Palette, 
-  Code, 
-  Search, 
-  Share2, 
-  BarChart3, 
-  PenTool,
-  LayoutGrid
-} from 'lucide-react'
+import { Phone, ArrowRight,Mail, Globe, Users, Target, Palette, Code, Search, Share2, BarChart3, PenTool,LayoutGrid} from 'lucide-react'
+import Link from 'next/link'
 
 export default function Services() {
   return (
@@ -52,7 +40,7 @@ export default function Services() {
                   { icon: LayoutGrid, text: "CMS Integration" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <item.icon className="h-5 w-5 text-blue-600" />
+                    <item.icon className="h-5 w-5 text-secondary-blue" />
                     <span>{item.text}</span>
                   </div>
                 ))}
@@ -64,27 +52,27 @@ export default function Services() {
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Custom website design and development</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Mobile-first responsive development</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Search engine optimization</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Content management system</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Website hosting and maintenance</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Security and performance optimization</span>
                 </li>
               </ul>
@@ -103,27 +91,27 @@ export default function Services() {
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Content creation and curation</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Community management</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Social media strategy</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Engagement monitoring</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Analytics and reporting</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Campaign management</span>
                 </li>
               </ul>
@@ -143,7 +131,7 @@ export default function Services() {
                   { icon: Target, text: "Audience Growth" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <item.icon className="h-5 w-5 text-blue-600" />
+                    <item.icon className="h-5 w-5 text-secondary-blue" />
                     <span>{item.text}</span>
                   </div>
                 ))}
@@ -191,7 +179,7 @@ export default function Services() {
                   <ul className="space-y-2">
                     {service.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-center">
-                        <span className="text-blue-600 mr-2">•</span>
+                        <span className="text-secondary-blue mr-2">•</span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -222,7 +210,7 @@ export default function Services() {
                   { icon: Share2, text: "Social Graphics" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <item.icon className="h-5 w-5 text-blue-600" />
+                    <item.icon className="h-5 w-5 text-secondary-blue" />
                     <span>{item.text}</span>
                   </div>
                 ))}
@@ -234,27 +222,27 @@ export default function Services() {
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Logo design and brand guidelines</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Social media graphics</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Marketing collateral</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Digital ad creatives</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Email templates</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-secondary-blue">•</span>
                   <span>Presentation design</span>
                 </li>
               </ul>
@@ -264,7 +252,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-primary-blue text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">
             <span>Ready to Get Started?</span>
@@ -272,16 +260,12 @@ export default function Services() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             <span>Contact us today to discuss your digital marketing needs and how we can help achieve your goals.</span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              <span>(214) 499-5629</span>
-            </Button>
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100" >
-              <Mail className="mr-2 h-5 w-5" />
-              <a href="mailto:info@vixi.agency">
-                <span>info@vixi.agency</span>
-              </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">            
+            <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
+              <Link href="/contact">
+                <span>Contact Us</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>

@@ -3,15 +3,24 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail } from 'lucide-react'
+import { Phone, Mail, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { AnimatedSection } from "@/components/animated-section"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
   description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services. Call (214) 499-5629.",
+  icons: {
+    icon: [
+      {
+        url: "/images/favicon.svg",
+        type: "image/svg+xml",
+      }
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -27,7 +36,7 @@ export default function RootLayout({
           <div className="container mx-auto px-6">
             <nav className="flex items-center justify-between h-16">
               {/* Logo */}
-              <a href="/" className="text-xl font-bold text-blue-900">
+              <a href="/" className="text-xl font-bold text-primary-blue">
                 <Image
                   src="/images/logo.png"
                   alt="Vixi Logo"
@@ -40,35 +49,35 @@ export default function RootLayout({
 
               {/* Navigation */}
               <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-gray-600 hover:text-blue-900">
+                <Link href="/" className="text-gray-600 hover:text-primary-blue">
                   <span>Home</span>
                 </Link>
-                <Link href="/about" className="text-gray-600 hover:text-blue-900">
+                <Link href="/about" className="text-gray-600 hover:text-primary-blue">
                   <span>About</span>
                 </Link>
-                <Link href="/services" className="text-gray-600 hover:text-blue-900">
+                <Link href="/services" className="text-gray-600 hover:text-primary-blue">
                   <span>Services</span>
                 </Link>
-                <Link href="/packages" className="text-gray-600 hover:text-blue-900">
+                <Link href="/packages" className="text-gray-600 hover:text-primary-blue">
                   <span>Packages</span>
                 </Link>
-                <Link href="/portfolio" className="text-gray-600 hover:text-blue-900">
+                <Link href="/portfolio" className="text-gray-600 hover:text-primary-blue">
                   <span>Portfolio</span>
                 </Link>                
-                <Link href="/contact" className="text-gray-600 hover:text-blue-900">
+                <Link href="/contact" className="text-gray-600 hover:text-primary-blue">
                   <span>Contact</span>
                 </Link>
               </div>
 
               {/* CTA Buttons */}
               <div className="hidden md:flex items-center space-x-4">
-                <Button size="sm" variant="outline" className="text-blue-900" asChild>
+                <Button size="sm" variant="outline" className="text-primary-blue" asChild>
                   <a href="mailto:info@vixi.agency">
                     <Mail className="mr-2 h-4 w-4" />
                     <span>info@vixi.agency</span>
                   </a>
                 </Button>
-                <Button size="sm" className="bg-blue-900" asChild>
+                <Button size="sm" className="bg-primary-blue" asChild>
                   <a href="tel:2144995629">
                     <Phone className="mr-2 h-4 w-4" />
                     <span>(214) 499-5629</span>
@@ -96,13 +105,7 @@ export default function RootLayout({
               {/* Company Info */}
               <div>
                 <div className="mb-6">  {/* Added container for logo */}
-                  <Image
-                    src="/images/logo.png"
-                    alt="Vixi Logo"
-                    width={120}
-                    height={40}
-                    className="object-contain brightness-0 invert"  // Makes the logo white for dark background
-                  />
+                  <Image src="/images/logo.png" alt="Vixi Logo" width={120} height={40} className="object-contain brightness-0 invert"  />
                 </div>
                 <p className="text-gray-400">
                   Dallas's Premier Digital Marketing Agency

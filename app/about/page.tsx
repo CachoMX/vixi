@@ -1,7 +1,8 @@
 // app/about/page.tsx
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Phone, Mail, Users, Target, Award, Coffee, Clock, Heart } from 'lucide-react'
+import { Phone, Mail, Users, ArrowRight, Target, Award, Coffee, Clock, Heart } from 'lucide-react'
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -44,7 +45,7 @@ export default function About() {
           <div className="grid md:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Award className="h-10 w-10 text-blue-600 mb-4" />
+                <Award className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Excellence</span></CardTitle>
                 <CardDescription>
                   <span>We pursue excellence in everything we do, from the smallest detail to comprehensive strategies.</span>
@@ -54,7 +55,7 @@ export default function About() {
 
             <Card>
               <CardHeader>
-                <Target className="h-10 w-10 text-blue-600 mb-4" />
+                <Target className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Innovation</span></CardTitle>
                 <CardDescription>
                   <span>We constantly explore new technologies and strategies to keep our clients ahead.</span>
@@ -64,7 +65,7 @@ export default function About() {
 
             <Card>
               <CardHeader>
-                <Heart className="h-10 w-10 text-blue-600 mb-4" />
+                <Heart className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Dedication</span></CardTitle>
                 <CardDescription>
                   <span>We're committed to our clients' success, treating their goals as our own.</span>
@@ -74,7 +75,7 @@ export default function About() {
 
             <Card>
               <CardHeader>
-                <Users className="h-10 w-10 text-blue-600 mb-4" />
+                <Users className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Transparency</span></CardTitle>
                 <CardDescription>
                   <span>We believe in clear communication and honest relationships with our clients.</span>
@@ -93,7 +94,7 @@ export default function About() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-secondary-blue mb-6">
                 <Coffee className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">
@@ -105,7 +106,7 @@ export default function About() {
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-secondary-blue mb-6">
                 <Target className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">
@@ -117,7 +118,7 @@ export default function About() {
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-secondary-blue mb-6">
                 <Clock className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">
@@ -132,7 +133,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-primary-blue text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">
             <span>Ready to Work Together?</span>
@@ -141,16 +142,12 @@ export default function About() {
             <span>Let's discuss how we can help achieve your digital marketing goals.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              <span>(214) 499-5629</span>
+            <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
+              <Link href="/contact">
+                <span>Contact Us</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100" >
-        <Mail className="mr-2 h-5 w-5" />
-        <a href="mailto:info@vixi.agency">
-          <span>info@vixi.agency</span>
-        </a>
-      </Button>
           </div>
         </div>
       </section>

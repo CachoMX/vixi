@@ -195,7 +195,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
               <Button 
                 type="submit" 
-                className="w-full bg-blue-900 hover:bg-blue-800"
+                className="w-full bg-primary-blue hover:bg-primary-blue/90"
                 disabled={status.submitting}
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
@@ -219,15 +219,15 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center">
-                  <Clock className="h-5 w-5 text-blue-600 mr-2" />
+                  <Clock className="h-5 w-5 text-secondary-blue mr-2" />
                   <span>Phone calls: Immediate during business hours</span>
                 </li>
                 <li className="flex items-center">
-                  <Mail className="h-5 w-5 text-blue-600 mr-2" />
+                  <Mail className="h-5 w-5 text-secondary-blue mr-2" />
                   <span>Emails: Within 24 hours</span>
                 </li>
                 <li className="flex items-center">
-                  <MessageSquare className="h-5 w-5 text-blue-600 mr-2" />
+                  <MessageSquare className="h-5 w-5 text-secondary-blue mr-2" />
                   <span>Contact form: Within 24 hours</span>
                 </li>
               </ul>
@@ -239,7 +239,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <p className="text-gray-600 mb-6">
                 <span>Prefer to schedule a specific time? Book a 30-minute consultation with our team.</span>
               </p>
-              <Button className="bg-blue-900 hover:bg-blue-800">
+              <Button className="bg-primary-blue hover:bg-primary-blue/90">
                 <Calendar className="mr-2 h-5 w-5" />
                 <span>Schedule Consultation</span>
               </Button>
@@ -256,7 +256,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <span>Visit Our Office</span>
             </h3>
             <div className="flex items-center justify-center mb-6">
-              <MapPin className="h-5 w-5 text-blue-600 mr-2" />
+              <MapPin className="h-5 w-5 text-secondary-blue mr-2" />
               <span>Dallas, TX</span>
             </div>
             <p className="text-gray-600">

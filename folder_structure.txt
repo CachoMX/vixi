@@ -1,0 +1,64 @@
+Folder PATH listing
+Volume serial number is 8E92-4BEF
+C:.
+|   .gitignore
+|   folder_structure.txt
+|   jsconfig.json
+|   next-env.d.ts
+|   package-lock.json
+|   package.json
+|   postcss.config.js
+|   tailwind.config.js
+|   tsconfig.json
+|   
++---app
+|   |   globals.css
+|   |   layout.tsx
+|   |   page.tsx
+|   |   
+|   +---about
+|   |       page.tsx
+|   |       
+|   +---api
+|   |   \---contact
+|   |           route.ts
+|   |           
+|   +---careers
+|   |       page.tsx
+|   |       
+|   +---contact
+|   |   |   page.tsx
+|   |   |   
+|   |   \---thank-you
+|   |           page.tsx
+|   |           
+|   +---packages
+|   |       page.tsx
+|   |       
+|   +---portfolio
+|   |       page.tsx
+|   |       
+|   +---privacy
+|   |       page.tsx
+|   |       
+|   +---services
+|   |       page.tsx
+|   |       
+|   \---terms
+|           page.tsx
+|           
++---components
+|   |   mobile-menu.tsx
+|   |   
+|   \---ui
+|           button.tsx
+|           card.tsx
+|           
++---lib
+|       utils.ts
+|       
+
+\---public
+    \---images
+            logo.png
+            

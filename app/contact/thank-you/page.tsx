@@ -30,15 +30,15 @@ export default function ThankYou() {
                 </h2>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-600 mt-1">1.</span>
+                    <span className="text-secondary-blue mt-1">1.</span>
                     <span>Our team will review your inquiry</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-600 mt-1">2.</span>
+                    <span className="text-secondary-blue mt-1">2.</span>
                     <span>We'll prepare a customized response based on your needs</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-blue-600 mt-1">3.</span>
+                    <span className="text-secondary-blue mt-1">3.</span>
                     <span>You'll receive a detailed email or phone call from our team</span>
                   </li>
                 </ul>
@@ -51,7 +51,7 @@ export default function ThankYou() {
                 <span>Need Immediate Assistance?</span>
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-blue-900">
+                <Button className="bg-primary-blue">
                   <Phone className="mr-2 h-5 w-5" />
                   <span>(214) 499-5629</span>
                 </Button>
@@ -65,7 +65,7 @@ export default function ThankYou() {
             {/* Navigation Options */}
             <div className="space-y-4">
               <Link href="/">
-                <Button variant="ghost" className="text-blue-900">
+                <Button variant="ghost" className="text-primary-blue">
                   <ArrowLeft className="mr-2 h-5 w-5" />
                   <span>Return to Homepage</span>
                 </Button>

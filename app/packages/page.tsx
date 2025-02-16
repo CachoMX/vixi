@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Phone, Mail, ArrowRight, Check, Shield, BarChart, Users, Zap } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Packages() {
   return (
@@ -29,7 +30,7 @@ export default function Packages() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
-                <Users className="h-10 w-10 text-blue-600 mb-4" />
+                <Users className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Dedicated Support</span></CardTitle>
                 <CardDescription>
                   <span>Get a dedicated team of experts and priority support access</span>
@@ -38,7 +39,7 @@ export default function Packages() {
             </Card>
             <Card>
               <CardHeader>
-                <BarChart className="h-10 w-10 text-blue-600 mb-4" />
+                <BarChart className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Regular Updates</span></CardTitle>
                 <CardDescription>
                   <span>Monthly strategy reviews and performance reports</span>
@@ -47,7 +48,7 @@ export default function Packages() {
             </Card>
             <Card>
               <CardHeader>
-                <Shield className="h-10 w-10 text-blue-600 mb-4" />
+                <Shield className="h-10 w-10 text-secondary-blue mb-4" />
                 <CardTitle><span>Flexible Solutions</span></CardTitle>
                 <CardDescription>
                   <span>Customizable packages that grow with your business</span>
@@ -89,7 +90,7 @@ export default function Packages() {
                     <span>Monthly Performance Reports</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-blue-900">
+                <Button className="w-full bg-primary-blue">
                   <span>Get Started</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -99,7 +100,7 @@ export default function Packages() {
             {/* Business Accelerator Package */}
             <Card className="relative border-blue-900 shadow-lg">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <span className="bg-blue-900 text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
+                <span className="bg-primary-blue text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
               </div>
               <CardHeader>
                 <CardTitle><span>Business Accelerator</span></CardTitle>
@@ -130,7 +131,7 @@ export default function Packages() {
                     <span>Detailed Analytics & Strategy Sessions</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-blue-900">
+                <Button className="w-full bg-primary-blue">
                   <span>Get Started</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -168,7 +169,7 @@ export default function Packages() {
                     <span>Dedicated Account Team</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-blue-900">
+                <Button className="w-full bg-primary-blue">
                   <span>Get Started</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -188,7 +189,7 @@ export default function Packages() {
             <p className="text-lg text-gray-600 mb-8">
               <span>Don't see exactly what you need? We'll create a custom package tailored to your specific requirements.</span>
             </p>
-            <Button size="lg" className="bg-blue-900">
+            <Button size="lg" className="bg-primary-blue">
               <span>Contact Us</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -240,7 +241,7 @@ export default function Packages() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-primary-blue text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">
             <span>Ready to Start Your Digital Journey?</span>
@@ -249,13 +250,11 @@ export default function Packages() {
             <span>Contact us to discuss the perfect package for your business needs.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              <span>(214) 499-5629</span>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              <Mail className="mr-2 h-5 w-5" />
-              <span>info@vixi.agency</span>
+            <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
+              <Link href="/contact">
+                <span>Contact Us</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>

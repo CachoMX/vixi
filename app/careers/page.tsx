@@ -51,7 +51,7 @@ export default function Careers() {
             ].map((benefit, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <benefit.icon className="h-10 w-10 text-blue-600 mb-4" />
+                  <benefit.icon className="h-10 w-10 text-secondary-blue mb-4" />
                   <CardTitle><span>{benefit.title}</span></CardTitle>
                   <CardDescription>
                     <span>{benefit.description}</span>
@@ -111,7 +111,7 @@ export default function Careers() {
                         </span>
                       </CardDescription>
                     </div>
-                    <Button className="bg-blue-900">
+                    <Button className="bg-primary-blue">
                       <span>Apply Now</span>
                       <Send className="ml-2 h-4 w-4" />
                     </Button>
@@ -198,7 +198,7 @@ export default function Careers() {
                 }
               ].map((step, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  <div className="w-12 h-12 bg-primary-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                     <span>{step.step}</span>
                   </div>
                   <h3 className="font-bold text-xl mb-2">
@@ -215,7 +215,7 @@ export default function Careers() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-primary-blue text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">
             <span>Ready to Join Our Team?</span>
@@ -223,7 +223,7 @@ export default function Careers() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             <span>Take the first step towards an exciting career in digital marketing.</span>
           </p>
-          <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100">
             <Mail className="mr-2 h-5 w-5" />
             <a href="mailto:info@vixi.agency">
               <span>Send Your Application</span>

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { ArrowRight, Globe, Users, Target, Code, Palette, BarChart, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Portfolio() {
   return (
@@ -28,7 +29,7 @@ export default function Portfolio() {
               <Button
                 key={filter}
                 variant={filter === 'All Projects' ? 'default' : 'outline'}
-                className={filter === 'All Projects' ? 'bg-blue-900' : ''}
+                className={filter === 'All Projects' ? 'bg-primary-blue' : ''}
               >
                 <span>{filter}</span>
               </Button>
@@ -44,7 +45,7 @@ export default function Portfolio() {
             {/* E-commerce Project */}
             <Card className="overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
-                <span className="absolute bottom-4 left-4 bg-blue-900 text-white px-4 py-1 rounded-full text-sm">
+                <span className="absolute bottom-4 left-4 bg-primary-blue text-white px-4 py-1 rounded-full text-sm">
                   Web Development
                 </span>
               </div>
@@ -72,7 +73,7 @@ export default function Portfolio() {
             {/* Social Media Campaign */}
             <Card className="overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
-                <span className="absolute bottom-4 left-4 bg-blue-900 text-white px-4 py-1 rounded-full text-sm">
+                <span className="absolute bottom-4 left-4 bg-primary-blue text-white px-4 py-1 rounded-full text-sm">
                   Social Media
                 </span>
               </div>
@@ -100,7 +101,7 @@ export default function Portfolio() {
             {/* Digital Advertising */}
             <Card className="overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
-                <span className="absolute bottom-4 left-4 bg-blue-900 text-white px-4 py-1 rounded-full text-sm">
+                <span className="absolute bottom-4 left-4 bg-primary-blue text-white px-4 py-1 rounded-full text-sm">
                   Digital Advertising
                 </span>
               </div>
@@ -128,7 +129,7 @@ export default function Portfolio() {
             {/* Brand Identity */}
             <Card className="overflow-hidden">
               <div className="h-64 bg-gray-200 relative">
-                <span className="absolute bottom-4 left-4 bg-blue-900 text-white px-4 py-1 rounded-full text-sm">
+                <span className="absolute bottom-4 left-4 bg-primary-blue text-white px-4 py-1 rounded-full text-sm">
                   Graphic Design
                 </span>
               </div>
@@ -170,7 +171,7 @@ export default function Portfolio() {
               { number: '200%', label: 'Average ROI' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-900 mb-2">
+                <div className="text-4xl font-bold text-primary-blue mb-2">
                   <span>{stat.number}</span>
                 </div>
                 <div className="text-gray-600">
@@ -212,7 +213,7 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-primary-blue text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">
             <span>Ready to Start Your Project?</span>
@@ -220,10 +221,12 @@ export default function Portfolio() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             <span>Let's discuss how we can help achieve your digital marketing goals.</span>
           </p>
-          <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-            <span>Start Your Project</span>
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
+              <Link href="/contact">
+                <span>Start Your Project</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
         </div>
       </section>
     </main>

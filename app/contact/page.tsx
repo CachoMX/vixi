@@ -249,7 +249,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       </section>
 
       {/* Location Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" style={{ backgroundImage: "url('/images/map.webp')" }}>
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-6">

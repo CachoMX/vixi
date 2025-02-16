@@ -1,8 +1,11 @@
-'use client';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
-import { useEffect, useRef, useState } from 'react';
+interface AnimatedSectionProps {
+  children: ReactNode;
+  className?: string;
+}
 
-export const AnimatedSection = ({ children, className = '' }) => {
+export const AnimatedSection = ({ children, className = '' }: AnimatedSectionProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -11,12 +14,9 @@ export const AnimatedSection = ({ children, className = '' }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
         }
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -31,13 +31,8 @@ export const AnimatedSection = ({ children, className = '' }) => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`${className} ${
-        isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'
-      }`}
-    >
+    <section ref={sectionRef} className={`${className} ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
       {children}
-    </div>
+    </section>
   );
 };

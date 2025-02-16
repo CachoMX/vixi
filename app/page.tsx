@@ -61,12 +61,15 @@ export default function Home() {
           
           {/* Image Section */}
           <div className="flex justify-center">
-            <img 
-              src="/images/chess-figure-on-chessboard-strategy-management-2023-11-27-05-37-19-utc.jpg" 
-              alt="Strategic Chess Piece" 
-              className="max-w-full rounded-lg shadow-lg"
-            />
-          </div>
+          <img 
+            src="/images/chess-figure-on-chessboard-strategy-management-2023-11-27-05-37-19-utc.jpg" 
+            alt="Strategic Chess Piece" 
+            width={660} 
+            height={290} 
+            className="max-w-full rounded-lg shadow-lg"
+          />
+        </div>
+
         </div>
       </section>
       </AnimatedSection>

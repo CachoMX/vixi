@@ -7,6 +7,7 @@ import { Phone, Mail, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatedSection } from "@/components/animated-section"
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -23,13 +24,38 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en">
+    <head>
+        {/* Google Analytics */}
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-Z6LEGPCJV7" />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Z6LEGPCJV7');
+            `,
+          }}
+        />
+        <Script
+        id="partygo-tracking"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            var head = document.head;
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://t.partygo.mx/v1/lst/universal-script?ph=664ad84e5a8d71d02e5f8fe74e28bfe1eca5b5a982655b75fac5513b98d326d3&tag=!vixi&ref_url=" + encodeURI(document.URL);
+            head.appendChild(script);
+          `,
+        }}
+      />
+      </head>
       <body className={inter.className}>
         {/* Header */}
         <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b">
@@ -37,14 +63,7 @@ export default function RootLayout({
             <nav className="flex items-center justify-between h-16">
               {/* Logo */}
               <a href="/" className="text-xl font-bold text-primary-blue">
-                <Image
-                  src="/images/logo.png"
-                  alt="Vixi Logo"
-                  width={120}
-                  height={40}
-                  priority
-                  className="object-contain"  // This helps maintain aspect ratio
-                />
+                <Image src="/images/logo.png" alt="Vixi Logo" width={120} height={40} priority className="object-contain"  />
               </a>
 
               {/* Navigation */}

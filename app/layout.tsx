@@ -55,6 +55,34 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
           `,
         }}
       />
+
+      {/* LocalBusiness Schema Markup for SEO */}
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Vixi Agency",
+              "address": {
+                "streetAddress": "1603 Caldwell St",
+                "addressLocality": "Dallas",
+                "addressRegion": "TX",
+                "postalCode": "75223",
+                "addressCountry": "US"
+              },
+              "telephone": "+1-214-499-5629",
+              "url": "https://vixi.agency",
+              "sameAs": [
+                "https://www.facebook.com/vixiagency",
+                "https://www.linkedin.com/company/vixiagency"
+              ]
+            }),
+          }}
+        />
+
       </head>
       <body className={inter.className}>
         {/* Header */}

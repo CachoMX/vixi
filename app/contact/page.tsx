@@ -249,22 +249,26 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       </section>
 
       {/* Location Section */}
-      <section className="py-20 bg-gray-50" style={{ backgroundImage: "url('/images/map.webp')" }}>
-        <div className="container mx-auto px-6 text-center">
+      <section
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/map.webp')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-white/50"></div>
+
+        {/* Content Container */}
+        <div className="relative container mx-auto px-6 text-center bg-white/80 py-10 rounded-lg shadow-lg">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-6">
-              <span>Visit Our Office</span>
+              <span>Based in Dallas, TX</span>
             </h3>
-            <div className="flex items-center justify-center mb-6">
-              <MapPin className="h-5 w-5 text-secondary-blue mr-2" />
-              <span>Dallas, TX</span>
-            </div>
             <p className="text-gray-600">
-              <span>While we primarily work with clients remotely, we're always happy to schedule in-person meetings for local clients.</span>
+              <span>We collaborate with clients nationwide, delivering top-tier digital marketing solutions. Our team is always available to assist remotely.</span>
             </p>
           </div>
         </div>
       </section>
+
     </main>
   )
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, useEffect, useRef, useState } from 'react';
 
 interface AnimatedSectionProps {
@@ -7,7 +9,7 @@ interface AnimatedSectionProps {
 
 export const AnimatedSection = ({ children, className = '' }: AnimatedSectionProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

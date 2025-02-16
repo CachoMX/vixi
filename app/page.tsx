@@ -62,7 +62,7 @@ export default function Home() {
           {/* Image Section */}
           <div className="flex justify-center">
           <img 
-            src="/images/chess-figure-on-chessboard-strategy-management-2023-11-27-05-37-19-utc.jpg" 
+            src="/images/digital-excellence.webp" 
             alt="Strategic Chess Piece" 
             width={660} 
             height={290} 

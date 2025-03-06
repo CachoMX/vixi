@@ -95,29 +95,23 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
               </a>
 
               {/* Navigation */}
-              <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-gray-600 hover:text-primary-blue">
-                  <span>Home</span>
-                </Link>
-                <Link href="/about" className="text-gray-600 hover:text-primary-blue">
-                  <span>About</span>
-                </Link>
-                <Link href="/services" className="text-gray-600 hover:text-primary-blue">
-                  <span>Services</span>
-                </Link>
-                <Link href="/packages" className="text-gray-600 hover:text-primary-blue">
-                  <span>Packages</span>
-                </Link>
-                <Link href="/blog" className="text-gray-600 hover:text-primary-blue">
-                  <span>Blog</span>
-                </Link>
-                <Link href="/portfolio" className="text-gray-600 hover:text-primary-blue">
-                  <span>Portfolio</span>
-                </Link>                
-                <Link href="/contact" className="text-gray-600 hover:text-primary-blue">
-                  <span>Contact</span>
-                </Link>
-              </div>
+                <div className="hidden md:flex items-center space-x-8">
+                  <Link href="/" className="text-gray-600 hover:text-primary-blue">
+                    <span>Home</span>
+                  </Link>
+                  <Link href="/about" className="text-gray-600 hover:text-primary-blue">
+                    <span>About</span>
+                  </Link>
+                  <Link href="/services" className="text-gray-600 hover:text-primary-blue">
+                    <span>Services</span>
+                  </Link>
+                  <Link href="/packages" className="text-gray-600 hover:text-primary-blue">
+                    <span>Packages</span>
+                  </Link>                  
+                  <Link href="/contact" className="text-gray-600 hover:text-primary-blue">
+                    <span>Contact</span>
+                  </Link>
+                </div>
 
               {/* CTA Buttons */}
               <div className="hidden md:flex items-center space-x-4">

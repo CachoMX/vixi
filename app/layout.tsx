@@ -108,6 +108,9 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                 <Link href="/packages" className="text-gray-600 hover:text-primary-blue">
                   <span>Packages</span>
                 </Link>
+                <Link href="/blog" className="text-gray-600 hover:text-primary-blue">
+                  <span>Blog</span>
+                </Link>
                 <Link href="/portfolio" className="text-gray-600 hover:text-primary-blue">
                   <span>Portfolio</span>
                 </Link>                

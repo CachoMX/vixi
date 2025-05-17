@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatedSection } from "@/components/animated-section"
 import Script from 'next/script';
+import { SocialIcons } from '@/components/social-icons'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,6 +22,23 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
       }
     ],
+  },
+  openGraph: {
+    title: 'Vixi Agency | Dallas Digital Marketing & Advertising Experts',
+    description: 'Transform your digital presence with Vixi\'s comprehensive marketing solutions. Expert web development, social media, and advertising services.',
+    url: 'https://vixi.agency',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@Vixi_Agency',
+    creator: '@Vixi_Agency',
   },
 }
 
@@ -167,6 +185,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                       <span>info@vixi.agency</span>
                     </a>
                   </p>
+                </div>
+
+                <div className="mt-4">
+                  <SocialIcons />
                 </div>
               </div>
 

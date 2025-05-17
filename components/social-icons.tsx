@@ -1,10 +1,11 @@
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
 export const socialLinks = {
   instagram: "https://www.instagram.com/vixi.llc/",
   facebook: "https://www.facebook.com/vixiagency",
-  twitter: "https://x.com/Vixi_Agency"
+  twitter: "https://x.com/Vixi_Agency",
+  linkedin: "https://www.linkedin.com/company/106735596/"
 }
 
 export function SocialIcons() {
@@ -38,6 +39,16 @@ export function SocialIcons() {
       >
         <Twitter className="h-5 w-5" />
         <span className="sr-only">Twitter</span>
+      </Link>
+
+      <Link
+        href={socialLinks.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:text-blue-400 transition-colors"
+      >
+        <Linkedin className="h-5 w-5" />
+        <span className="sr-only">LinkedIn</span>
       </Link>
     </div>
   )

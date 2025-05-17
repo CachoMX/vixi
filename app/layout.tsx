@@ -97,7 +97,9 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
               "url": "https://vixi.agency",
               "sameAs": [
                 "https://www.facebook.com/vixiagency",
-                "https://www.linkedin.com/company/vixiagency"
+                "https://www.linkedin.com/company/106735596/",
+                "https://www.instagram.com/vixi.llc/",
+                "https://x.com/Vixi_Agency"
               ]
             }),
           }}

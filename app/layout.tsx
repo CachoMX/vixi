@@ -259,6 +259,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   )

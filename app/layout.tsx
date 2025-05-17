@@ -10,6 +10,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import Script from 'next/script';
 import { SocialIcons } from '@/components/social-icons'
 import { NewsletterForm } from '@/components/newsletter-form'
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 

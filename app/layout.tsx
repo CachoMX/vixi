@@ -11,6 +11,7 @@ import Script from 'next/script';
 import { SocialIcons } from '@/components/social-icons'
 import { NewsletterForm } from '@/components/newsletter-form'
 import { Analytics } from "@vercel/analytics/next"
+import { MobileMenu } from '@/components/mobile-menu'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -152,11 +153,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
               </div>
 
               {/* Mobile menu button */}
-              <button className="md:hidden">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+              <MobileMenu />
             </nav>
           </div>
         </header>
@@ -179,7 +176,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                 <div className="space-y-2">
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4" />
-                    <a href="tel:9459542923" className="hover:text-blue-400">
+                    <a href="tel:+19459542923" className="hover:text-blue-400">
                       <span>(945) 954-2923</span>
                     </a>
                   </p>

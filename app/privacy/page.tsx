@@ -1,3 +1,10 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Vixi Agency",
+  description: "Read Vixi Agency's privacy policy to understand how we collect, use, and protect your personal information.",
+};
+
 // app/privacy/page.tsx
 export default function PrivacyPolicy() {
   return (

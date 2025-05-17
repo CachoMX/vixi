@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Phone, Mail, ArrowRight, Check, Shield, BarChart, Users, Zap } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Marketing Packages | Scalable Plans for Small Businesses - Vixi",
+  description: "Choose the perfect marketing plan for your business. Our packages offer flexibility, results, and transparent pricing. Start growing with Vixi today.",
+};
 
 const packages = [
   {

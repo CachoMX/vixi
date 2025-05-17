@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Phone, Mail, Clock, MapPin, MessageSquare, Calendar } from 'lucide-react'
 import { CalendlyButton } from '@/components/calendly-button'
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Vixi Agency | Let’s Talk Growth 🚀",
+  description: "Ready to grow your business? Contact Vixi for a free consultation on digital marketing, web development, and advertising. Let’s build something great together.",
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({

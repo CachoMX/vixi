@@ -5,6 +5,12 @@ import { Phone, Mail, Award, ArrowRight, Check, BarChart, Globe, Palette, Target
 import { AnimatedSection } from "@/components/animated-section"
 import { Counter } from "@/components/counter"
 import Link from 'next/link'
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
+  description: "Transform your digital presence with Vixi's full-service marketing solutions. We specialize in web design, social media, and paid advertising that drive real results.",
+};
 
 export default function Home() {
   return (

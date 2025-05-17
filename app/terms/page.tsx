@@ -1,3 +1,10 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Vixi Agency",
+  description: "Review Vixi Agency's terms of service and conditions for using our digital marketing services.",
+};
+
 // app/terms/page.tsx
 export default function TermsOfService() {
   return (

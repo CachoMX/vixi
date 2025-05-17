@@ -1,3 +1,10 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Digital Marketing Services | Web, Social Media & Ads - Vixi Dallas",
+  description: "Explore Vixi's complete suite of services including website design, social media management, SEO, and digital advertising, tailored for business growth.",
+};
+
 // app/services/page.tsx
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"

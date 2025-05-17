@@ -9,6 +9,7 @@ import Image from 'next/image'
 import { AnimatedSection } from "@/components/animated-section"
 import Script from 'next/script';
 import { SocialIcons } from '@/components/social-icons'
+import { NewsletterForm } from '@/components/newsletter-form'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -163,16 +164,16 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Company Info */}
               <div>
-                <div className="mb-6">  {/* Added container for logo */}
-                  <Image src="/images/logo.png" alt="Vixi Logo" width={120} height={40} className="object-contain brightness-0 invert"  />
+                <div className="mb-6">
+                  <Image src="/images/logo.png" alt="Vixi Logo" width={120} height={40} className="object-contain brightness-0 invert" />
                 </div>
-                <p className="text-gray-400">
+                <p className="text-gray-400 mb-4">
                   Dallas's Premier Digital Marketing Agency
                 </p>
-                <div className="mt-4 space-y-2">
+                <div className="space-y-2">
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4" />
                     <a href="tel:9459542923" className="hover:text-blue-400">
@@ -192,40 +193,23 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                 </div>
               </div>
 
-              {/* Services */}
+              {/* Quick Links */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Services</h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li>
-                    <Link href="/services" className="hover:text-white transition-colors">
-                      <span>Website Development</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services" className="hover:text-white transition-colors">
-                      <span>Social Media Management</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services" className="hover:text-white transition-colors">
-                      <span>Digital Advertising</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services" className="hover:text-white transition-colors">
-                      <span>Graphic Design</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Company */}
-              <div>
-                <h3 className="text-lg font-bold mb-4">Company</h3>
-                <ul className="space-y-2 text-gray-400">
+                <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+                <ul className="grid grid-cols-2 gap-4 text-gray-400">
                   <li>
                     <Link href="/about" className="hover:text-white transition-colors">
                       <span>About Us</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services" className="hover:text-white transition-colors">
+                      <span>Services</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/packages" className="hover:text-white transition-colors">
+                      <span>Packages</span>
                     </Link>
                   </li>
                   <li>
@@ -246,31 +230,13 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                 </ul>
               </div>
 
-              {/* Connect */}
+              {/* Newsletter */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Connect</h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                      <span>LinkedIn</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                      <span>Facebook</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                      <span>Instagram</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                      <span>Twitter</span>
-                    </a>
-                  </li>
-                </ul>
+                <h3 className="text-lg font-bold mb-4">Stay Updated</h3>
+                <p className="text-gray-400 mb-4">
+                  Subscribe to our newsletter for digital marketing tips and industry insights.
+                </p>
+                <NewsletterForm />
               </div>
             </div>
 
@@ -278,14 +244,14 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
             <div className="border-t border-gray-800 mt-12 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center">
                 <p className="text-gray-400 text-sm">
-                  <span>© {new Date().getFullYear()} Vixi LLC. All rights reserved.</span>
+                  © {new Date().getFullYear()} Vixi LLC. All rights reserved.
                 </p>
                 <div className="flex space-x-6 mt-4 md:mt-0">
                   <Link href="/privacy" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    <span>Privacy Policy</span>
+                    Privacy Policy
                   </Link>
                   <Link href="/terms" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    <span>Terms of Service</span>
+                    Terms of Service
                   </Link>
                 </div>
               </div>

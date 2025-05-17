@@ -1,8 +1,43 @@
 // app/packages/page.tsx
 import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Phone, Mail, ArrowRight, Check, Shield, BarChart, Users, Zap } from 'lucide-react'
 import Link from 'next/link'
+
+const packages = [
+  {
+    name: "Essential Growth",
+    description: "Perfect for small businesses and startups",
+    features: [
+      "Website Management & Basic SEO",
+      "Social Media Management (Single Platform)",
+      "Basic Digital Advertising",
+      "Monthly Performance Reports",
+    ],
+  },
+  {
+    name: "Business Accelerator",
+    description: "Perfect for growing businesses",
+    features: [
+      "Enhanced Website & SEO Optimization",
+      "Multi-Platform Social Media Management",
+      "Advanced Digital Advertising (2-3 Platforms)",
+      "Design Services & Content Creation",
+      "Detailed Analytics & Strategy Sessions",
+    ],
+  },
+  {
+    name: "Enterprise Elite",
+    description: "Perfect for large businesses",
+    features: [
+      "Premium Website & Technical Services",
+      "Full-Service Social Media Management",
+      "Complete Multi-Platform Advertising",
+      "Comprehensive Design Services",
+      "Dedicated Account Team",
+    ],
+  },
+]
 
 export default function Packages() {
   return (
@@ -63,118 +98,31 @@ export default function Packages() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Essential Growth Package */}
-            <Card className="relative">
-              <CardHeader>
-                <CardTitle><span>Essential Growth</span></CardTitle>
-                <CardDescription>
-                  <span>Perfect for small businesses and startups</span>
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Website Management & Basic SEO</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Social Media Management (Single Platform)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Basic Digital Advertising</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Monthly Performance Reports</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-primary-blue">
-                  <span>Get Started</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Business Accelerator Package */}
-            <Card className="relative border-blue-900 shadow-lg">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <span className="bg-primary-blue text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
-              </div>
-              <CardHeader>
-                <CardTitle><span>Business Accelerator</span></CardTitle>
-                <CardDescription>
-                  <span>Perfect for growing businesses</span>
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Enhanced Website & SEO Optimization</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Multi-Platform Social Media Management</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Advanced Digital Advertising (2-3 Platforms)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Design Services & Content Creation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Detailed Analytics & Strategy Sessions</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-primary-blue">
-                  <span>Get Started</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Enterprise Elite Package */}
-            <Card className="relative">
-              <CardHeader>
-                <CardTitle><span>Enterprise Elite</span></CardTitle>
-                <CardDescription>
-                  <span>Perfect for large businesses</span>
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Premium Website & Technical Services</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Full-Service Social Media Management</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Complete Multi-Platform Advertising</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Comprehensive Design Services</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                    <span>Dedicated Account Team</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-primary-blue">
-                  <span>Get Started</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardContent>
-            </Card>
+            {packages.map((pkg) => (
+              <Card key={pkg.name} className="flex flex-col">
+                <CardHeader>
+                  <CardTitle>{pkg.name}</CardTitle>
+                  <CardDescription>{pkg.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-4 mb-8">
+                    {pkg.features.map((feature) => (
+                      <li className="flex items-start" key={feature}>
+                        <Check className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full bg-primary-blue" asChild>
+                    <Link href="/contact">
+                      Get Started
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -189,9 +137,10 @@ export default function Packages() {
             <p className="text-lg text-gray-600 mb-8">
               <span>Don't see exactly what you need? We'll create a custom package tailored to your specific requirements.</span>
             </p>
-            <Button size="lg" className="bg-primary-blue">
-              <span>Contact Us</span>
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="bg-primary-blue" asChild>
+              <Link href="/contact">
+                Contact Us
+              </Link>
             </Button>
           </div>
         </div>

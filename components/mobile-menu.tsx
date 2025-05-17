@@ -26,17 +26,18 @@ export function MobileMenu() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 w-full h-full">
-          <div className="flex flex-col h-full bg-white">
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b bg-white">
-              <Link href="/" onClick={() => setIsOpen(false)}>
+        <div className="fixed inset-0 z-50 w-full h-full bg-white">
+          <div className="flex flex-col h-full">
+            {/* Header - Match main header height and padding */}
+            <div className="flex items-center justify-between h-20 px-6 border-b bg-white">
+              <Link href="/" onClick={() => setIsOpen(false)} className="py-4">
                 <Image 
                   src="/images/logo.png" 
                   alt="Vixi Logo" 
-                  width={100} 
-                  height={35} 
+                  width={130} 
+                  height={45} 
                   className="object-contain" 
+                  priority
                 />
               </Link>
               <button 

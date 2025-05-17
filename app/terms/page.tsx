@@ -176,7 +176,7 @@ export default function TermsOfService() {
                   <span>info@vixi.agency</span>
                 </a><br />
                 <span>Phone: </span>
-                <a href="tel:9459542923" className="text-secondary-blue hover:text-blue-800">
+                <a href="tel:+19459542923" className="text-secondary-blue hover:text-blue-800">
                   <span>(945) 954-2923</span>
                 </a>
               </p>

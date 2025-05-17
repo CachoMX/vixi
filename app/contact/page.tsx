@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Phone, Mail, Clock, MapPin, MessageSquare, Calendar } from 'lucide-react'
+import { CalendlyButton } from '@/components/calendly-button'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -202,6 +203,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 <span>{status.submitting ? 'Sending...' : 'Send Message'}</span>
               </Button>
             </form>
+
+            
           </div>
         </div>
       </section>
@@ -239,10 +242,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <p className="text-gray-600 mb-6">
                 <span>Prefer to schedule a specific time? Book a 30-minute consultation with our team.</span>
               </p>
-              <Button className="bg-primary-blue hover:bg-primary-blue/90">
-                <Calendar className="mr-2 h-5 w-5" />
-                <span>Schedule Consultation</span>
-              </Button>
+              <CalendlyButton />              
             </div>
           </div>
         </div>

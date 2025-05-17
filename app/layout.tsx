@@ -111,11 +111,18 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         {/* Header */}
         <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b">
           <div className="container mx-auto px-6">
-            <nav className="flex items-center justify-between h-16">
+            <nav className="flex items-center justify-between h-20">
               {/* Logo */}
-              <a href="/" className="text-xl font-bold text-primary-blue">
-                <Image src="/images/logo.png" alt="Vixi Logo" width={120} height={40} priority className="object-contain"  />
-              </a>
+              <Link href="/" className="flex items-center">
+                <Image 
+                  src="/images/logo.png" 
+                  alt="Vixi LLC" 
+                  width={130} 
+                  height={45} 
+                  priority 
+                  className="object-contain" 
+                />
+              </Link>
 
               {/* Navigation */}
                 <div className="hidden md:flex items-center space-x-8">

@@ -152,7 +152,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                   <Image src="/images/logo.png" alt="Vixi Logo" width={120} height={40} className="object-contain brightness-0 invert"  />
                 </div>
                 <p className="text-gray-400">
-                  Dallas's Premier Digital Marketing Agency.
+                  Dallas's Premier Digital Marketing Agency
                 </p>
                 <div className="mt-4 space-y-2">
                   <p className="flex items-center">

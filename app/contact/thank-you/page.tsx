@@ -53,7 +53,7 @@ export default function ThankYou() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-primary-blue">
                   <Phone className="mr-2 h-5 w-5" />
-                  <span>(214) 499-5629</span>
+                  <span>(945) 954-2923</span>
                 </Button>
                 <Button variant="outline">
                   <Mail className="mr-2 h-5 w-5" />

@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
-  description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services. Call (214) 499-5629.",
+  description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services. Call (945) 954-2923.",
   icons: {
     icon: [
       {
@@ -73,7 +73,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                 "postalCode": "75223",
                 "addressCountry": "US"
               },
-              "telephone": "+1-214-499-5629",
+              "telephone": "+1-945-954-2923",
               "url": "https://vixi.agency",
               "sameAs": [
                 "https://www.facebook.com/vixiagency",
@@ -122,9 +122,9 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                   </a>
                 </Button>
                 <Button size="sm" className="bg-primary-blue" asChild>
-                  <a href="tel:2144995629">
+                  <a href="tel:9459542923">
                     <Phone className="mr-2 h-4 w-4" />
-                    <span>(214) 499-5629</span>
+                    <span>(945) 954-2923</span>
                   </a>
                 </Button>
               </div>
@@ -157,8 +157,8 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
                 <div className="mt-4 space-y-2">
                   <p className="flex items-center">
                     <Phone className="mr-2 h-4 w-4" />
-                    <a href="tel:2144995629" className="hover:text-blue-400">
-                      <span>(214) 499-5629</span>
+                    <a href="tel:9459542923" className="hover:text-blue-400">
+                      <span>(945) 954-2923</span>
                     </a>
                   </p>
                   <p className="flex items-center">

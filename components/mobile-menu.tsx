@@ -65,7 +65,7 @@ export default function MobileMenu() {
                 </Button>
                 <Button className="w-full justify-start bg-blue-900">
                   <Phone className="mr-2 h-4 w-4" />
-                  (214) 499-5629
+                  (945) 954-2923
                 </Button>
               </div>
             </nav>

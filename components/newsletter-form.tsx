@@ -11,14 +11,21 @@ export function NewsletterForm() {
 
   async function handleSubmit(formData: FormData) {
     setStatus('loading')
-    const result = await subscribeToNewsletter(formData)
-    
-    if (result.success) {
-      setStatus('success')
-      setMessage('Thank you for subscribing!')
-    } else {
+    try {
+      const result = await subscribeToNewsletter(formData)
+      
+      if (result.success) {
+        setStatus('success')
+        setMessage('Thank you for subscribing!')
+      } else {
+        setStatus('error')
+        setMessage(result.error || 'Something went wrong. Please try again.')
+        console.error('Subscription error:', result.error)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
       setStatus('error')
-      setMessage(result.error || 'Something went wrong. Please try again.')
+      setMessage('Something went wrong. Please try again.')
     }
   }
 

@@ -20,15 +20,15 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-              <span>Transform Your Digital Presence with Expert Solutions</span>
+              Transform Your Digital Presence with Expert Solutions
             </h1>
             <p className="text-xl mb-8 animate-fade-in stagger-1">
-              <span>Dallas's Premier Full-Service Digital Agency: Web Development, Social Media, Advertising & Design</span>
+              Dallas's Premier Full-Service Digital Agency: Web Development, Social Media, Advertising & Design
             </p>
             <div className="flex gap-4 animate-fade-in stagger-2">
               <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
               <Link href="/contact">
-                <span>Contact Us</span>
+                Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -36,15 +36,15 @@ export default function Home() {
             <div className="flex items-center gap-6 mt-8 text-sm animate-fade-in stagger-3">
               <div className="flex items-center">
                 <Award className="h-5 w-5 mr-2" />
-                <span>Full-Service Agency</span>
+                Full-Service Agency
               </div>
               <div className="flex items-center">
                 <Check className="h-5 w-5 mr-2" />
-                <span>Platform-Certified</span>
+                Platform-Certified
               </div>
               <div className="flex items-center">
                 <Award className="h-5 w-5 mr-2" />
-                <span>Dallas-Based</span>
+                Dallas-Based
               </div>
             </div>
           </div>
@@ -58,10 +58,10 @@ export default function Home() {
           {/* Text Content */}
           <div>
             <h2 className="text-3xl font-bold mb-6">
-              <span>Your Partner in Digital Excellence</span>
+              Your Partner in Digital Excellence
             </h2>
             <p className="text-xl text-gray-600 mb-6">
-              <span>At Vixi, we combine creativity with data-driven strategies to deliver exceptional digital solutions that help businesses thrive in today's competitive landscape.</span>
+                We help businesses grow through high-converting websites, ad campaigns, and automation tools. Our team specializes in Google Ads, Facebook marketing, SEO, and custom development solutions.
             </p>
           </div>
           
@@ -85,30 +85,30 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
-            <span>Comprehensive Digital Solutions</span>
+            Comprehensive Digital Solutions
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Globe className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
-                <CardTitle><span>Website Development</span></CardTitle>
+                <CardTitle>Website Development</CardTitle>
                 <CardDescription>
-                  <span>Custom-built websites that convert visitors into customers</span>
+                  Custom-built websites that convert visitors into customers
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Responsive Design</span>
+                    Responsive Design
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>SEO Optimization</span>
+                    SEO Optimization
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Custom Development</span>
+                    Custom Development
                   </li>
                 </ul>
               </CardContent>
@@ -117,24 +117,24 @@ export default function Home() {
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Users className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
-                <CardTitle><span>Social Media</span></CardTitle>
+                <CardTitle>Social Media</CardTitle>
                 <CardDescription>
-                  <span>End-to-end social media management</span>
+                  End-to-end social media management
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Content Creation</span>
+                    Content Creation
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Community Management</span>
+                    Community Management
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Performance Analytics</span>
+                    Performance Analytics
                   </li>
                 </ul>
               </CardContent>
@@ -143,24 +143,24 @@ export default function Home() {
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Target className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110"/>
-                <CardTitle><span>Digital Advertising</span></CardTitle>
+                <CardTitle>Digital Advertising</CardTitle>
                 <CardDescription>
-                  <span>Multi-platform campaign management</span>
+                  Multi-platform campaign management
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Platform Expertise</span>
+                    Platform Expertise
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Advanced Targeting</span>
+                    Advanced Targeting
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Performance Tracking</span>
+                    Performance Tracking
                   </li>
                 </ul>
               </CardContent>
@@ -169,24 +169,24 @@ export default function Home() {
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Palette className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
-                <CardTitle><span>Graphic Design</span></CardTitle>
+                <CardTitle>Graphic Design</CardTitle>
                 <CardDescription>
-                  <span>Professional creative services</span>
+                  Professional creative services
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Brand Identity</span>
+                    Brand Identity
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Marketing Materials</span>
+                    Marketing Materials
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Social Media Graphics</span>
+                    Social Media Graphics
                   </li>
                 </ul>
               </CardContent>
@@ -201,15 +201,15 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
-            <span>Why Choose Vixi</span>
+            Why Choose Vixi
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Zap className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110"/>
-                <CardTitle><span>Expert Team</span></CardTitle>
+                <CardTitle>Expert Team</CardTitle>
                 <CardDescription>
-                  <span>Our certified professionals bring years of experience across all digital platforms</span>
+                  Our certified professionals bring years of experience across all digital platforms
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -217,9 +217,9 @@ export default function Home() {
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Target className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
-                <CardTitle><span>Data-Driven Approach</span></CardTitle>
+                <CardTitle>Data-Driven Approach</CardTitle>
                 <CardDescription>
-                  <span>We make decisions based on real data and measurable results</span>
+                  We make decisions based on real data and measurable results
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -227,9 +227,9 @@ export default function Home() {
             <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <Users className="h-10 w-10 text-secondary-blue mb-4 transform transition-transform group-hover:scale-110" />
-                <CardTitle><span>Dedicated Support</span></CardTitle>
+                <CardTitle>Dedicated Support</CardTitle>
                 <CardDescription>
-                  <span>Direct access to your team of experts whenever you need us</span>
+                  Direct access to your team of experts whenever you need us
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -244,37 +244,37 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div>
             <h2 className="text-3xl font-bold text-center mb-6">
-              <span>Certified Hyros Experts</span>
+              Certified Hyros Experts
             </h2>
             <p className="text-xl text-center text-gray-600 mb-12">
-              <span>Maximize your advertising performance with precise tracking and optimization through Hyros integration</span>
+              Maximize your advertising performance with precise tracking and optimization through Hyros integration
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle><span>Enhanced Tracking Integration</span></CardTitle>
+                  <CardTitle>Enhanced Tracking Integration</CardTitle>
                   <CardDescription>
-                    <span>Our experts specialize in seamless integration of Hyros with:</span>
+                    Our experts specialize in seamless integration of Hyros with:
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Facebook Ads for accurate attribution</span>
+                      Facebook Ads for accurate attribution
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Google Ads performance tracking</span>
+                      Google Ads performance tracking
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>TikTok Ads monitoring</span>
+                      TikTok Ads monitoring
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Multi-platform campaign analysis</span>
+                      Multi-platform campaign analysis
                     </li>
                   </ul>
                 </CardContent>
@@ -282,28 +282,28 @@ export default function Home() {
 
               <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle><span>Performance Benefits</span></CardTitle>
+                  <CardTitle>Performance Benefits</CardTitle>
                   <CardDescription>
-                    <span>Unlock the full potential of your advertising campaigns:</span>
+                    Unlock the full potential of your advertising campaigns:
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Real-time sales attribution tracking</span>
+                      Real-time sales attribution tracking
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Accurate ROAS measurement</span>
+                      Accurate ROAS measurement
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Advanced customer journey insights</span>
+                      Advanced customer journey insights
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Cross-platform optimization</span>
+                      Cross-platform optimization
                     </li>
                   </ul>
                 </CardContent>
@@ -312,34 +312,34 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-lg shadow-sm border hover-scale transition-all duration-300 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-4 text-center">
-                <span>Why Choose Our Hyros Integration Services?</span>
+                Why Choose Our Hyros Integration Services?
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <Target className="h-8 w-8 text-secondary-blue mx-auto mb-3" />
                   <h4 className="font-semibold mb-2">
-                    <span>Precise Attribution</span>
+                    Precise Attribution
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    <span>Eliminate tracking discrepancies and identify your best-performing campaigns</span>
+                    Eliminate tracking discrepancies and identify your best-performing campaigns
                   </p>
                 </div>
                 <div className="text-center">
                   <BarChart className="h-8 w-8 text-secondary-blue mx-auto mb-3" />
                   <h4 className="font-semibold mb-2">
-                    <span>Data-Driven Decisions</span>
+                    Data-Driven Decisions
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    <span>Make informed decisions based on accurate performance metrics</span>
+                    Make informed decisions based on accurate performance metrics
                   </p>
                 </div>
                 <div className="text-center">
                   <Zap className="h-8 w-8 text-secondary-blue mx-auto mb-3" />
                   <h4 className="font-semibold mb-2">
-                    <span>Optimization Expertise</span>
+                    Optimization Expertise
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    <span>Leverage our experience to maximize your advertising ROI</span>
+                    Leverage our experience to maximize your advertising ROI
                   </p>
                 </div>
               </div>
@@ -355,37 +355,37 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div>
             <h2 className="text-3xl font-bold text-center mb-6">
-              <span>Custom Automation Solutions</span>
+              Custom Automation Solutions
             </h2>
             <p className="text-xl text-center text-gray-600 mb-12">
-              <span>Streamline your workflows and save time with powerful automated processes using Zapier and Make</span>
+              Streamline your workflows and save time with powerful automated processes using Zapier and Make
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle><span>Zapier Integration</span></CardTitle>
+                  <CardTitle>Zapier Integration</CardTitle>
                   <CardDescription>
-                    <span>Connect and automate workflows across 5,000+ apps</span>
+                    Connect and automate workflows across 5,000+ apps
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Connect your favorite tools and apps</span>
+                      Connect your favorite tools and apps
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Automate repetitive tasks</span>
+                      Automate repetitive tasks
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Create multi-step automated workflows</span>
+                      Create multi-step automated workflows
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Real-time data synchronization</span>
+                      Real-time data synchronization
                     </li>
                   </ul>
                 </CardContent>
@@ -393,28 +393,28 @@ export default function Home() {
 
               <Card className="hover-scale transition-all duration-300 hover:shadow-lg">
                 <CardHeader>
-                  <CardTitle><span>Make (Integromat)</span></CardTitle>
+                  <CardTitle>Make (Integromat)</CardTitle>
                   <CardDescription>
-                    <span>Build complex automation scenarios with advanced features</span>
+                    Build complex automation scenarios with advanced features
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Visual workflow builder</span>
+                      Visual workflow builder
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Advanced data mapping</span>
+                      Advanced data mapping
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Complex scenario handling</span>
+                      Complex scenario handling
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
-                      <span>Error handling and notifications</span>
+                      Error handling and notifications
                     </li>
                   </ul>
                 </CardContent>
@@ -423,37 +423,37 @@ export default function Home() {
 
             <div className="bg-gray-50 p-8 rounded-lg shadow-sm border hover-scale transition-all duration-300 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-6 text-center">
-                <span>Common Automation Use Cases</span>
+                Common Automation Use Cases
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <h4 className="font-semibold mb-3">
-                    <span>Lead Management</span>
+                    Lead Management
                   </h4>
                   <ul className="text-sm text-gray-600 space-y-2">
-                    <li><span>Form submissions to CRM</span></li>
-                    <li><span>Lead notification system</span></li>
-                    <li><span>Follow-up automation</span></li>
+                    <li>Form submissions to CRM</li>
+                    <li>Lead notification system</li>
+                    <li>Follow-up automation</li>
                   </ul>
                 </div>
                 <div className="text-center">
                   <h4 className="font-semibold mb-3">
-                    <span>Data Synchronization</span>
+                    Data Synchronization
                   </h4>
                   <ul className="text-sm text-gray-600 space-y-2">
-                    <li><span>Multi-platform sync</span></li>
-                    <li><span>Database updates</span></li>
-                    <li><span>Real-time backups</span></li>
+                    <li>Multi-platform sync</li>
+                    <li>Database updates</li>
+                    <li>Real-time backups</li>
                   </ul>
                 </div>
                 <div className="text-center">
                   <h4 className="font-semibold mb-3">
-                    <span>Workflow Automation</span>
+                    Workflow Automation
                   </h4>
                   <ul className="text-sm text-gray-600 space-y-2">
-                    <li><span>Document generation</span></li>
-                    <li><span>Task management</span></li>
-                    <li><span>Team notifications</span></li>
+                    <li>Document generation</li>
+                    <li>Task management</li>
+                    <li>Team notifications</li>
                   </ul>
                 </div>
               </div>
@@ -461,11 +461,11 @@ export default function Home() {
 
             <div className="mt-12 text-center">
               <p className="text-lg text-gray-600 mb-6">
-                <span>Whether you need simple task automation or complex multi-step workflows, we can build the perfect solution for your business needs.</span>
+                Whether you need simple task automation or complex multi-step workflows, we can build the perfect solution for your business needs.
               </p>
               <Button className="bg-primary-blue hover:bg-primary-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-lg " asChild>
               <Link href="/contact">
-                <span>Discuss Your Automation Needs</span>
+                Discuss Your Automation Needs
                 <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -505,14 +505,14 @@ export default function Home() {
         <section className="py-20 bg-primary-blue text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              <span>Ready to Transform Your Digital Presence?</span>
+              Ready to Transform Your Digital Presence?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              <span>Contact us today to discuss how we can help achieve your business goals. Our team of experts is ready to create a customized solution for your needs.</span>
+              Contact us today to discuss how we can help achieve your business goals. Our team of experts is ready to create a customized solution for your needs.
             </p>
             <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg" asChild >
               <Link href="/contact">
-                <span>Contact Us</span>
+                Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -525,10 +525,10 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4">
-            <span>Platform Expertise</span>
+            Platform Expertise
           </h2>
           <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            <span>We're certified experts across all major digital advertising platforms</span>
+            We're certified experts across all major digital advertising platforms
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {['Google Ads', 'Facebook Ads', 'TikTok', 'LinkedIn', 'Pinterest', 'X (Twitter)', 'Snapchat', 'Bing Ads'].map((platform) => (
@@ -537,7 +537,7 @@ export default function Home() {
                 className="p-4 rounded-lg border bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:border-secondary-blue hover:-translate-y-1"
               >
                 <p className="font-semibold text-gray-800">
-                  <span>{platform}</span>
+                  {platform}
                 </p>
               </div>
             ))}

@@ -5,13 +5,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 text-gray-600"
@@ -102,7 +103,43 @@ export function MobileMenu() {
                   <span>info@vixi.agency</span>
                 </a>
               </Button>
+              <div className="mt-8 px-4 py-4 border-t border-gray-200">
+              <div className="flex items-center justify-center space-x-6">
+                <a 
+                  href="https://instagram.com/vixiagency" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary-blue transition-colors"
+                >
+                  <Instagram className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://facebook.com/vixiagency" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary-blue transition-colors"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://linkedin.com/company/vixiagency" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary-blue transition-colors"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://twitter.com/vixiagency" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary-blue transition-colors"
+                >
+                  <Twitter className="h-6 w-6" />
+                </a>
+              </div>
             </div>
+            </div>            
           </div>
         </div>
       )}

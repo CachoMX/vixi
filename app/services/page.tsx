@@ -27,9 +27,16 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6">
       <p className="text-gray-600 mb-12 text-lg max-w-3xl">
         We offer a full suite of digital marketing services tailored to help businesses grow online. Whether you're launching a new brand or scaling an existing one, our solutions are designed to maximize visibility, engagement, and revenue.
       </p>
+      </div>
+      </section>
+
+      {/* Contact Section */}
 
 
       {/* Website Development Section */}

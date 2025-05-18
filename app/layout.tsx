@@ -3,15 +3,14 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import { Phone, Mail } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { AnimatedSection } from "@/components/animated-section"
-import Script from 'next/script';
-import { SocialIcons } from '@/components/social-icons'
-import { NewsletterForm } from '@/components/newsletter-form'
 import { Analytics } from "@vercel/analytics/next"
 import { MobileMenu } from '@/components/mobile-menu'
+import Script from 'next/script'
+import { SocialIcons } from '@/components/social-icons'
+import { NewsletterForm } from '@/components/newsletter-form'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,69 +23,146 @@ export const metadata: Metadata = {
   description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services."
 }
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode}>) {
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "DigitalMarketingAgency",
+  "name": "Vixi Agency",
+  "alternateName": "Vixi",
+  "description": "Dallas's Premier Full-Service Digital Agency offering web development, social media, advertising & design services. We combine creativity with data-driven strategies to deliver exceptional digital solutions.",
+  "url": "https://www.vixi.agency/",
+  "logo": "https://www.vixi.agency/images/logo.webp",
+  "image": "https://www.vixi.agency/images/digital-excellence.webp",
+  "telephone": "(945) 954-2923",
+  "email": "info@vixi.agency",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1603 Caldwell St",
+    "addressLocality": "Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75223",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "32.7767",
+    "longitude": "-96.7970"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "15:00"
+    }
+  ],
+  "paymentAccepted": "Zelle, Venmo, Wire Transfer",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "32.7767",
+      "longitude": "-96.7970"
+    },
+    "geoRadius": "50000"
+  },
+  "sameAs": [
+    "https://www.facebook.com/61572986380910",
+    "https://www.linkedin.com/company/vixi-agency/"
+  ],
+  "services": [
+    {
+      "@type": "Service",
+      "name": "Web Development",
+      "description": "Custom-built websites that convert visitors into customers with responsive design, SEO optimization, and custom development."
+    },
+    {
+      "@type": "Service",
+      "name": "Digital Advertising",
+      "description": "Multi-platform campaign management with platform expertise, advanced targeting, and performance tracking."
+    },
+    {
+      "@type": "Service",
+      "name": "Hyros Integration",
+      "description": "Maximize advertising performance with precise tracking and optimization through Hyros integration."
+    },
+    {
+      "@type": "Service",
+      "name": "Automation Solutions",
+      "description": "Streamline workflows and save time with powerful automated processes using Zapier and Make."
+    },
+    {
+      "@type": "Service",
+      "name": "Graphic Design",
+      "description": "Professional creative services including brand identity, marketing materials, and social media graphics."
+    }
+  ],
+  "areaServed": "Dallas-Fort Worth Metroplex",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Marketing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Website Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Social Media Management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Digital Advertising"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Automation Solutions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Graphic Design"
+        }
+      }
+    ]
+  }
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-    <head>
-        {/* Google Analytics */}
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-Z6LEGPCJV7" />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-Z6LEGPCJV7');
-            `,
-          }}
-        />
-        <Script
-        id="partygo-tracking"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            var head = document.head;
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = "https://t.partygo.mx/v1/lst/universal-script?ph=664ad84e5a8d71d02e5f8fe74e28bfe1eca5b5a982655b75fac5513b98d326d3&tag=!vixi&ref_url=" + encodeURI(document.URL);
-            head.appendChild(script);
-          `,
-        }}
-      />
-
-      {/* LocalBusiness Schema Markup for SEO */}
-        <Script
-          id="local-business-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Vixi Agency",
-              "address": {
-                "streetAddress": "1603 Caldwell St",
-                "addressLocality": "Dallas",
-                "addressRegion": "TX",
-                "postalCode": "75223",
-                "addressCountry": "US"
-              },
-              "telephone": "+1-945-954-2923",
-              "url": "https://vixi.agency",
-              "sameAs": [
-                "https://www.facebook.com/vixiagency",
-                "https://www.linkedin.com/company/106735596/",
-                "https://www.instagram.com/vixi.llc/",
-                "https://x.com/Vixi_Agency"
-              ]
-            }),
-          }}
-        />
-
-      </head>
       <body className={inter.className}>
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData)
+          }}
+        />
+        
         {/* Header */}
         <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b">
           <div className="container mx-auto px-6">
@@ -244,6 +320,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
             </div>
           </div>
         </footer>
+        
         <Analytics />
       </body>
     </html>

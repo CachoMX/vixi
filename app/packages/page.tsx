@@ -62,6 +62,22 @@ export default function Packages() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 max-w-3xl text-gray-700 space-y-6">
+          <h2 className="text-2xl font-bold">Grow with Confidence</h2>
+          <p>
+            At Vixi Agency, we understand that no two businesses are alike. That’s why our digital marketing packages are
+            built with flexibility, transparency, and results in mind. Whether you're just getting started or scaling your
+            operation, our team provides everything from SEO and advertising to full-service social media and design.
+          </p>
+          <p>
+            With monthly reporting and ongoing strategic support, you get more than just services — you get a partnership that
+            evolves with your business. Our goal is to help you grow faster, smarter, and with full confidence in your investment.
+          </p>
+        </div>
+      </section>
+
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">

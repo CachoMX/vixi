@@ -236,14 +236,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
         <Script
           id="schema-org"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schemaData)
           }}
         />
+      </head>
+      <body className={inter.className}>
+
         
         {/* Header */}
         <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b">

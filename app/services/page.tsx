@@ -27,6 +27,10 @@ export default function Services() {
           </div>
         </div>
       </section>
+      <p className="text-gray-600 mb-12 text-lg max-w-3xl">
+        We offer a full suite of digital marketing services tailored to help businesses grow online. Whether you're launching a new brand or scaling an existing one, our solutions are designed to maximize visibility, engagement, and revenue.
+      </p>
+
 
       {/* Website Development Section */}
       <section className="py-20">
@@ -36,6 +40,10 @@ export default function Services() {
               <h2 className="text-3xl font-bold mb-6">
                 <span>Website Development</span>
               </h2>
+              <p className="text-gray-600 mb-8 text-lg">
+                At Vixi, our web development services go beyond aesthetics. We build custom websites that are not only visually appealing but also strategically engineered for performance, SEO, and conversions. From responsive layouts to robust CMS integration, we tailor each site to support your business goals.
+              </p>
+
               <p className="text-lg text-gray-600 mb-8">
                 <span>Custom-built websites that combine stunning design with powerful functionality to deliver exceptional user experiences and drive conversions.</span>
               </p>
@@ -127,6 +135,10 @@ export default function Services() {
               <h2 className="text-3xl font-bold mb-6">
                 <span>Social Media Management</span>
               </h2>
+              <p className="text-gray-600 mb-8 text-lg">
+                Social media is more than just posting content — it's about building a community and connecting authentically with your audience. Our social media experts create tailored strategies that align with your brand, foster engagement, and help grow your presence across all major platforms.
+              </p>
+
               <p className="text-lg text-gray-600 mb-8">
                 <span>Strategic social media management that builds your brand, engages your audience, and drives meaningful results across all major platforms.</span>
               </p>
@@ -155,6 +167,11 @@ export default function Services() {
             <h2 className="text-3xl font-bold mb-6">
               <span>Digital Advertising</span>
             </h2>
+
+            <p className="text-gray-600 mb-8 text-lg">
+              Our digital advertising services are built to deliver measurable ROI. Whether through search, display, or social ads, we help you reach the right audience with the right message. Our team handles every aspect — from targeting and creatives to budget optimization and analytics — so you can focus on results.
+            </p>
+
             <p className="text-lg text-gray-600">
               <span>Expert campaign management across all major advertising platforms to reach your target audience and achieve your marketing goals.</span>
             </p>
@@ -207,8 +224,11 @@ export default function Services() {
                 <span>Graphic Design</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                <span>Professional design services that elevate your brand and create stunning visuals across all your marketing materials.</span>
+                <span>
+                  Nuestro servicio de diseño gráfico está enfocado en construir una imagen sólida, memorable y profesional para tu marca. Desde la creación de logotipos hasta presentaciones corporativas, trabajamos contigo para comunicar visualmente lo que te hace único en el mercado.
+                </span>
               </p>
+
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: PenTool, text: "Brand Identity" },

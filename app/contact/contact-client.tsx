@@ -88,6 +88,19 @@ export default function ContactClient() {
             </div>
         </section>
 
+        <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+        <div className="text-gray-600 space-y-4">
+        <p className="mb-4">
+            At Vixi Agency, we’re committed to helping businesses grow through personalized digital marketing strategies.
+            Whether you’re just getting started or scaling up, our team in Dallas is ready to support you with expert website development, SEO, social media management, and advertising services.
+        </p>
+        <p>
+            Fill out the form below or schedule a consultation — let’s start building your brand’s success today. We respond to all inquiries within 24 hours and treat every project like our own.
+        </p>
+        </div>
+        </div>
+        </section>
 
 
         {/* Why Contact Us Section */}
@@ -266,6 +279,17 @@ export default function ContactClient() {
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 max-w-3xl text-gray-700 space-y-6">
+            <h2 className="text-2xl font-bold">We’re More Than Just a Contact Form</h2>
+            <p>
+            Reaching out to Vixi means you’re getting a team that listens, plans strategically, and acts quickly.
+            Our digital experts understand your industry and craft solutions designed to elevate your online presence.
+            </p>
+        </div>
+        </section>
+
 
       {/* Location Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-100 to-gray-200">

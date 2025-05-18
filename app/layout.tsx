@@ -103,6 +103,88 @@ const schemaData = {
       "description": "Professional creative services including brand identity, marketing materials, and social media graphics."
     }
   ],
+"mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Vixi Agency offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vixi Agency offers a comprehensive range of digital marketing services including custom website development, social media management, digital advertising across multiple platforms, Hyros integration for enhanced tracking, automation solutions with Zapier and Make, and professional graphic design services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas does Vixi Agency serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vixi Agency primarily serves the Dallas-Fort Worth Metroplex area, but we can work with clients nationwide on digital marketing projects. Our office is located in Dallas, TX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can Vixi Agency help improve my business's online presence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We help improve your online presence through data-driven strategies including SEO-optimized website development, strategic social media management, targeted digital advertising campaigns, and cohesive brand design. Our approach combines creativity with analytics to deliver measurable results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Vixi Agency different from other digital marketing agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vixi Agency stands out through our data-driven approach, certified expertise across all major digital platforms, specialized Hyros integration capabilities, and custom automation solutions. We provide dedicated support with direct access to your team of experts and focus on measurable results rather than vanity metrics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Hyros integration and how can it benefit my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hyros is an advanced tracking and attribution platform that helps businesses accurately measure advertising performance. Our Hyros integration services enable precise tracking of sales attribution, accurate ROAS measurement, and advanced customer journey insights across multiple platforms including Facebook, Google, and TikTok ads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do Vixi Agency's services cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our service costs vary based on project scope, business needs, and ongoing support requirements. We offer customized packages to suit different budgets and objectives. Contact us for a personalized quote based on your specific requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see results from digital marketing efforts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The timeline for seeing results varies depending on the service and your starting point. Some advertising campaigns can show results within days, while SEO and organic social media typically take 3-6 months to demonstrate significant impact. We provide regular reporting to track progress from the beginning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What digital advertising platforms does Vixi Agency work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have certified expertise across all major digital advertising platforms including Google Ads, Facebook Ads, TikTok, X (Twitter), Snapchat, and Bing Ads. Our team stays current with platform changes to maximize your advertising ROI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Vixi Agency help with marketing automation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in marketing automation solutions using platforms like Zapier and Make (formerly Integromat). We can automate various aspects of your business including lead management, data synchronization, workflow automation, and more to save time and improve efficiency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started working with Vixi Agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Getting started is easy. Simply contact us at (945) 954-2923 or email info@vixi.agency to schedule a consultation. We'll discuss your business goals, current digital presence, and develop a customized strategy tailored to your needs and budget."
+      }
+    }
+  ],
   "areaServed": "Dallas-Fort Worth Metroplex",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

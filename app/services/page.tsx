@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services | Web, Social Media & Ads - Vixi Dallas",
+  title: "Digital Marketing Services in Dallas | Vixi",
   description: "Explore Vixi's complete suite of services including website design, social media management, SEO, and digital advertising, tailored for business growth.",
 };
 

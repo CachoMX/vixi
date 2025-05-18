@@ -73,30 +73,59 @@ export default function ContactClient() {
   }
   
     return (
-      <main className="min-h-screen pt-16">
-        {/* Previous sections remain the same */}
-  
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl font-bold mb-6">
+              <span>Get in Touch</span>
+            </h1>
+            <p className="text-xl mb-8">
+              <span> Ready to transform your digital presence? Let's talk about your goals.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
+        {/* Why Contact Us Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-8">Why Choose Vixi Agency?</h2>
+              <div className="text-gray-600 space-y-4">
+                <p>
+                  At Vixi, we're more than a marketing agency — we're your digital growth partners. Whether you need a new website,
+                  want to launch an ad campaign, or elevate your brand on social media, we're here to help.
+                </p>
+                <p>
+                  Our Dallas-based team of designers, developers, and strategists are ready to support your business growth 
+                  with personalized solutions and measurable results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">
-                <span>Get In Touch</span>
-              </h2>
-              
               {status.submitted && (
                 <div className="mb-8 p-4 bg-green-100 text-green-700 rounded-md">
-                  <span>Thank you for your message. We'll get back to you soon!</span>
+                  Thank you for your message. We'll get back to you soon!
                 </div>
               )}
               
               {status.error && (
                 <div className="mb-8 p-4 bg-red-100 text-red-700 rounded-md">
-                  <span>{status.error}</span>
+                  {status.error}
                 </div>
               )}
-  
-              <form onSubmit={handleSubmit} className="space-y-8">
+
+              <form onSubmit={handleSubmit} className="space-y-8 bg-white p-8 rounded-lg shadow-sm">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">
@@ -202,72 +231,54 @@ export default function ContactClient() {
                   <span>{status.submitting ? 'Sending...' : 'Send Message'}</span>
                 </Button>
               </form>
-  
-              
-            </div>
           </div>
-        </section>
-  
-        {/* Quick Response & Scheduling Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">
-                  <span>Quick Response Guarantee</span>
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  <span>We value your time and aim to respond to all inquiries within:</span>
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <Clock className="h-5 w-5 text-secondary-blue mr-2" />
-                    <span>Phone calls: Immediate during business hours</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Mail className="h-5 w-5 text-secondary-blue mr-2" />
-                    <span>Emails: Within 24 hours</span>
-                  </li>
-                  <li className="flex items-center">
-                    <MessageSquare className="h-5 w-5 text-secondary-blue mr-2" />
-                    <span>Contact form: Within 24 hours</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-6">
-                  <span>Schedule a Meeting</span>
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  <span>Prefer to schedule a specific time? Book a 30-minute consultation with our team.</span>
-                </p>
-                <CalendlyButton />              
-              </div>
+        </div>
+      </section>
+
+      {/* Quick Response & Scheduling Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-6">Quick Response Guarantee</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center text-gray-600">
+                  <Clock className="h-5 w-5 text-primary-blue mr-3" />
+                  <span>Phone calls: Immediate during business hours</span>
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <Mail className="h-5 w-5 text-primary-blue mr-3" />
+                  <span>Emails: Within 24 hours</span>
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <MessageSquare className="h-5 w-5 text-primary-blue mr-3" />
+                  <span>Contact form: Within 24 hours</span>
+                </li>
+              </ul>
             </div>
-          </div>
-        </section>
-  
-        {/* Location Section */}
-        <section
-          className="relative py-20 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/map.webp')" }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-white/50"></div>
-  
-          {/* Content Container */}
-          <div className="relative container mx-auto px-6 text-center bg-white/80 py-10 rounded-lg shadow-lg">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold mb-6">
-                <span>Based in Dallas, TX</span>
-              </h3>
-              <p className="text-gray-600">
-                <span>We collaborate with clients nationwide, delivering top-tier digital marketing solutions. Our team is always available to assist remotely.</span>
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-6">Schedule a Meeting</h3>
+              <p className="text-gray-600 mb-6">
+                Prefer to schedule a specific time? Book a 30-minute consultation with our team.
               </p>
+              <CalendlyButton />
             </div>
           </div>
-        </section>
-  
-      </main>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="relative py-20 bg-gradient-to-r from-gray-100 to-gray-200">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-6">Based in Dallas, TX</h3>
+            <p className="text-gray-600">
+              We collaborate with clients nationwide, delivering top-tier digital marketing solutions. 
+              Our team is always available to assist remotely.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
     )
   }

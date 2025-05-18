@@ -26,6 +26,21 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <section className="py-16">
+        <div className="container mx-auto px-6 max-w-3xl text-gray-700 space-y-6">
+          <h2 className="text-2xl font-bold">Our Portfolio of Success</h2>
+          <p>
+            Every project we deliver is crafted with a growth-driven mindset. From complete website redesigns to
+            social media campaigns that spark engagement, we’re proud to have helped businesses from all industries
+            boost their online presence.
+          </p>
+          <p>
+            Below, you’ll find a selection of our favorite success stories, highlighting results we’ve achieved 
+            through strategic marketing, creative design, and data-backed advertising. We let our work speak for itself.
+          </p>
+        </div>
+      </section>
+
       {/* Filter Section */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">

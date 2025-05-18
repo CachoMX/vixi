@@ -6,7 +6,7 @@ import Link from 'next/link'
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Marketing Packages | Scalable Plans for Small Businesses - Vixi",
+  title: "Marketing Packages for Small Business | Vixi",
   description: "Choose the perfect marketing plan for your business. Our packages offer flexibility, results, and transparent pricing. Start growing with Vixi today.",
 };
 

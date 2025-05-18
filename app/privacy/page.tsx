@@ -12,155 +12,155 @@ export default function PrivacyPolicy() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">
-            <span>Privacy Policy</span>
+            Privacy Policy
           </h1>
           
           <div className="prose max-w-none">
             <p className="text-gray-600 mb-8">
-              <span>Last updated: January 12, 2025</span>
+              Last updated: January 12, 2025
             </p>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>1. Introduction</span>
+                1. Introduction
               </h2>
               <p className="mb-4">
-                <span>
+                
                   Vixi LLC ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website vixi.agency and use our services.
-                </span>
+                
               </p>
               <p>
-                <span>
+                
                   Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.
-                </span>
+                
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>2. Information We Collect</span>
+                2. Information We Collect
               </h2>
               <h3 className="text-xl font-semibold mb-3">
-                <span>2.1 Personal Information</span>
+                2.1 Personal Information
               </h3>
               <p className="mb-4">
-                <span>We may collect personal information that you voluntarily provide to us when you:</span>
+                We may collect personal information that you voluntarily provide to us when you:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li><span>Fill out contact forms</span></li>
-                <li><span>Request information about our services</span></li>
-                <li><span>Sign up for our newsletter</span></li>
-                <li><span>Contact us via email or phone</span></li>
+                <li>Fill out contact forms</li>
+                <li>Request information about our services</li>
+                <li>Sign up for our newsletter</li>
+                <li>Contact us via email or phone</li>
               </ul>
               <p className="mb-4">
-                <span>This information may include:</span>
+                This information may include:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li><span>Name</span></li>
-                <li><span>Email address</span></li>
-                <li><span>Phone number</span></li>
-                <li><span>Company name</span></li>
-                <li><span>Business information relevant to our services</span></li>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Company name</li>
+                <li>Business information relevant to our services</li>
               </ul>
 
               <h3 className="text-xl font-semibold mb-3">
-                <span>2.2 Automatically Collected Information</span>
+                2.2 Automatically Collected Information
               </h3>
               <p className="mb-4">
-                <span>When you visit our website, we automatically collect certain information about your device, including:</span>
+                When you visit our website, we automatically collect certain information about your device, including:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li><span>Browser type</span></li>
-                <li><span>Operating system</span></li>
-                <li><span>IP address</span></li>
-                <li><span>Pages visited</span></li>
-                <li><span>Time and date of visits</span></li>
-                <li><span>Referring website addresses</span></li>
+                <li>Browser type</li>
+                <li>Operating system</li>
+                <li>IP address</li>
+                <li>Pages visited</li>
+                <li>Time and date of visits</li>
+                <li>Referring website addresses</li>
               </ul>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>3. How We Use Your Information</span>
+                3. How We Use Your Information
               </h2>
               <p className="mb-4">
-                <span>We use the information we collect to:</span>
+                We use the information we collect to:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li><span>Provide, operate, and maintain our website and services</span></li>
-                <li><span>Improve and personalize your experience</span></li>
-                <li><span>Understand how you use our website</span></li>
-                <li><span>Develop new products, services, and features</span></li>
-                <li><span>Communicate with you about our services</span></li>
-                <li><span>Send you marketing and promotional communications (with your permission)</span></li>
-                <li><span>Find and prevent fraud</span></li>
+                <li>Provide, operate, and maintain our website and services</li>
+                <li>Improve and personalize your experience</li>
+                <li>Understand how you use our website</li>
+                <li>Develop new products, services, and features</li>
+                <li>Communicate with you about our services</li>
+                <li>Send you marketing and promotional communications (with your permission)</li>
+                <li>Find and prevent fraud</li>
               </ul>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>4. Information Sharing and Disclosure</span>
+                4. Information Sharing and Disclosure
               </h2>
               <p className="mb-4">
-                <span>We may share your information with:</span>
+                We may share your information with:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li><span>Service providers who assist in our operations</span></li>
-                <li><span>Professional advisers including lawyers, accountants, and insurers</span></li>
-                <li><span>Law enforcement or government agencies when required by law</span></li>
+                <li>Service providers who assist in our operations</li>
+                <li>Professional advisers including lawyers, accountants, and insurers</li>
+                <li>Law enforcement or government agencies when required by law</li>
               </ul>
               <p>
-                <span>We do not sell, rent, or trade your personal information to third parties for marketing purposes.</span>
+                We do not sell, rent, or trade your personal information to third parties for marketing purposes.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>5. Your Rights</span>
+                5. Your Rights
               </h2>
               <p className="mb-4">
-                <span>You have the right to:</span>
+                You have the right to:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
-                <li><span>Access your personal information</span></li>
-                <li><span>Correct inaccurate personal information</span></li>
-                <li><span>Request deletion of your personal information</span></li>
-                <li><span>Object to processing of your personal information</span></li>
-                <li><span>Withdraw consent where provided</span></li>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate personal information</li>
+                <li>Request deletion of your personal information</li>
+                <li>Object to processing of your personal information</li>
+                <li>Withdraw consent where provided</li>
               </ul>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>6. Security</span>
+                6. Security
               </h2>
               <p>
-                <span>We implement appropriate technical and organizational security measures to protect your information. However, no security system is impenetrable, and we cannot guarantee the security of your personal information.</span>
+                We implement appropriate technical and organizational security measures to protect your information. However, no security system is impenetrable, and we cannot guarantee the security of your personal information.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>7. Changes to This Policy</span>
+                7. Changes to This Policy
               </h2>
               <p>
-                <span>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</span>
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">
-                <span>8. Contact Us</span>
+                8. Contact Us
               </h2>
               <p className="mb-4">
-                <span>If you have questions about this Privacy Policy, please contact us at:</span>
+                If you have questions about this Privacy Policy, please contact us at:
               </p>
               <p className="mb-2">
-                <span>Vixi LLC</span><br />
-                <span>Dallas, TX</span><br />
-                <span>Email: </span>
+                Vixi LLC<br />
+                Dallas, TX<br />
+                Email: 
                 <a href="mailto:info@vixi.agency" className="text-secondary-blue hover:text-blue-800">
-                  <span>info@vixi.agency</span>
+                  info@vixi.agency
                 </a><br />                
               </p>
             </section>

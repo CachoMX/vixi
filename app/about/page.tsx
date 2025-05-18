@@ -91,8 +91,30 @@ export default function About() {
         </div>
       </section>
 
+      <section className="py-16">
+        <div className="container mx-auto px-6 max-w-3xl text-gray-700 space-y-6">
+          <h2 className="text-2xl font-bold">Why Businesses Trust Vixi</h2>
+          <p>
+            Vixi Agency was created to break the traditional agency mold. We’re not just a vendor — we’re a
+            long-term growth partner. Our clients value our ability to listen, understand their challenges,
+            and craft strategies that truly align with their goals. Every project is guided by clear metrics,
+            transparent communication, and an agile mindset.
+          </p>
+          <p>
+            Over the years, we've worked with startups, mid-sized businesses, and national brands. What they
+            all have in common is a desire to grow, adapt, and stand out. At Vixi, we deliver tailored digital
+            solutions rooted in data, creativity, and strategy — and we do it with heart.
+          </p>
+          <p>
+            Whether you’re looking to redesign your website, launch a campaign, or grow your brand organically,
+            our team brings together expertise in development, design, social media, paid ads, SEO, and analytics.
+            We’re proud of our work — and even prouder of the relationships we build.
+          </p>
+        </div>
+      </section>
+
       {/* Our Process Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">
             <span>Our Approach</span>
@@ -136,6 +158,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* CTA Section */}
       <section className="py-20 bg-primary-blue text-white">

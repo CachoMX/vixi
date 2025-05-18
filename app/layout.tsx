@@ -25,7 +25,8 @@ export const metadata: Metadata = {
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": "DigitalMarketingAgency",
+  "@type": "ProfessionalService", 
+  "additionalType": "https://schema.org/MarketingAgency", 
   "name": "Vixi Agency",
   "alternateName": "Vixi",
   "description": "Dallas's Premier Full-Service Digital Agency offering web development, social media, advertising & design services. We combine creativity with data-driven strategies to deliver exceptional digital solutions.",

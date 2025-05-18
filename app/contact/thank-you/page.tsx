@@ -2,6 +2,13 @@
 import { Button } from "@/components/ui/button"
 import { CheckCircle, ArrowLeft, Phone, Mail } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Thank You | Vixi Agency",
+  description: "Thanks for reaching out! Your message has been received and our team will get back to you shortly. Let's build something amazing together.",
+};
+
 
 export default function ThankYou() {
   return (

@@ -4,6 +4,11 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Phone, Mail, Users, ArrowRight, Target, Award, Coffee, Clock, Heart } from 'lucide-react'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "About Our Digital Marketing Agency in Dallas",
+  description: "Learn about Vixi Agency's journey and our commitment to delivering exceptional digital marketing solutions in Dallas."
+}
+
 export default function About() {
   return (
     <main className="min-h-screen pt-16">

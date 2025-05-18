@@ -4,6 +4,11 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { ArrowRight, Globe, Users, Target, Code, Palette, BarChart, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "Our Work & Success Stories",
+  description: "Explore our portfolio of successful digital marketing campaigns, web development projects, and brand transformations."
+}
+
 export default function Portfolio() {
   return (
     <main className="min-h-screen pt-16">

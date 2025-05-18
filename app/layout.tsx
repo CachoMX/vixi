@@ -16,33 +16,12 @@ import { MobileMenu } from '@/components/mobile-menu'
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
-  description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services. Call (945) 954-2923.",
-  icons: {
-    icon: [
-      {
-        url: "/images/favicon.svg",
-        type: "image/svg+xml",
-      }
-    ],
+  metadataBase: new URL('https://vixi.agency'),
+  title: {
+    default: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
+    template: "%s | Vixi Agency"
   },
-  openGraph: {
-    title: 'Vixi Agency | Dallas Digital Marketing & Advertising Experts',
-    description: 'Transform your digital presence with Vixi\'s comprehensive marketing solutions. Expert web development, social media, and advertising services.',
-    url: 'https://vixi.agency',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@Vixi_Agency',
-    creator: '@Vixi_Agency',
-  },
+  description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services."
 }
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode}>) {

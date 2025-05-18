@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Mail, Users, Brain, Zap, Star, Target, HeartHandshake, Send } from 'lucide-react'
 
+export const metadata = {
+  title: "Join Our Digital Marketing Team",
+  description: "Explore career opportunities at Vixi Agency. Join our team of digital marketing experts in Dallas."
+}
+
 export default function Careers() {
   return (
     <main className="min-h-screen pt-16">

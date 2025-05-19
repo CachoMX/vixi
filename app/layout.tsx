@@ -11,6 +11,7 @@ import { MobileMenu } from '@/components/mobile-menu'
 import Script from 'next/script'
 import { SocialIcons } from '@/components/social-icons'
 import { NewsletterForm } from '@/components/newsletter-form'
+import { ChevronDown } from 'lucide-react'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -230,6 +231,44 @@ const schemaData = {
   }
 }
 
+const services = [
+  {
+    title: "Website Design & Maintenance",
+    href: "/services/website-design",
+    description: "Custom WordPress websites with ongoing support",
+    label: "Starting at $325/mo",
+    isNew: true,
+  },
+  {
+    title: "Social Media Management",
+    href: "/services/social-media-management",
+    description: "Strategic content creation and community management",
+    label: "Starting at $1,500/mo",
+    isNew: true,
+  },
+  {
+    title: "Ads Management",
+    href: "/services/ads-management",
+    description: "Expert Facebook & Google Ads management",
+    label: "Starting at $650/mo",
+    isNew: true,
+  },
+  {
+    title: "Monthly Graphic Design",
+    href: "/services/monthly-graphic-design",
+    description: "Professional design services on a monthly retainer",
+    label: "Starting at $325/mo",
+    isNew: true,
+  },
+  {
+    title: "Hyros & Marketing Automation",
+    href: "/services/hyros-marketing-automation",
+    description: "Expert Hyros setup and workflow automation",
+    label: "Starting at $500",
+    isNew: true,
+  },
+]
+
 export default function RootLayout({
   children,
 }: {
@@ -271,15 +310,43 @@ export default function RootLayout({
                   <Link href="/" className="text-gray-600 hover:text-primary-blue">
                     <span>Home</span>
                   </Link>
+                  
+                  {/* Services Dropdown */}
+                  <div className="relative group inline-block">
+                    <div className="flex items-center text-gray-600 hover:text-primary-blue py-2 cursor-pointer">
+                      <span>Services</span>
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </div>
+
+                    <div className="absolute top-full left-0 mt-1 w-[300px] bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      {services.map((service) => (
+                        <Link
+                          key={service.title}
+                          href={service.href}
+                          className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                        >
+                          <div className="font-medium">{service.title}</div>
+                          <div className="text-sm text-gray-600 mt-1">{service.description}</div>
+                          {service.label && (
+                            <div className="text-sm text-primary-blue mt-1">{service.label}</div>
+                          )}
+                          {service.isNew && (
+                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-primary-blue text-white mt-2">
+                              New
+                            </span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+
                   <Link href="/about" className="text-gray-600 hover:text-primary-blue">
                     <span>About</span>
                   </Link>
-                  <Link href="/services" className="text-gray-600 hover:text-primary-blue">
-                    <span>Services</span>
-                  </Link>
                   <Link href="/packages" className="text-gray-600 hover:text-primary-blue">
                     <span>Packages</span>
-                  </Link>                  
+                  </Link>
                   <Link href="/contact" className="text-gray-600 hover:text-primary-blue">
                     <span>Contact</span>
                   </Link>

@@ -238,15 +238,15 @@ export default function ContactClient() {
                 ></textarea>
               </div>
     
-              {/* Add status messages */}
+              {/* Single status message section */}
               {status.error && (
-                <div className="p-4 text-red-700 bg-red-100 rounded-md">
+                <div className="p-4 text-red-700 bg-red-100 rounded-md" role="alert">
                   {status.error}
                 </div>
               )}
 
               {status.submitted && (
-                <div className="p-4 text-green-700 bg-green-100 rounded-md">
+                <div className="p-4 text-green-700 bg-green-100 rounded-md" role="alert">
                   Thank you for your message! We'll be in touch soon.
                 </div>
               )}

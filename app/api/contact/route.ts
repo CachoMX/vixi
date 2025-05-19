@@ -2,9 +2,9 @@
 import { NextResponse } from 'next/server'
 import sgMail from '@sendgrid/mail'
 
-if (!process.env.SENDGRID_API_KEY) {
-  console.error('SendGrid API key is missing')
-  throw new Error('SendGrid configuration error')
+if (!process.env.SENDGRID_API_KEY || !process.env.SLACK_WEBHOOK_URL) {
+  console.error('Missing required environment variables')
+  throw new Error('Configuration error')
 }
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -26,6 +26,7 @@ export async function POST(request: Request) {
       )
     }
 
+    // Send email via SendGrid
     const msg = {
       to: 'info@vixi.agency',
       from: {
@@ -46,6 +47,70 @@ export async function POST(request: Request) {
 
     await sgMail.send(msg)
 
+    // Send to Slack
+    try {
+      const slackResponse = await fetch(process.env.SLACK_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          blocks: [
+            {
+              type: 'header',
+              text: {
+                type: 'plain_text',
+                text: 'New Contact Form Submission 📬',
+                emoji: true
+              }
+            },
+            {
+              type: 'section',
+              fields: [
+                {
+                  type: 'mrkdwn',
+                  text: `*Name:*\n${fullName}`
+                },
+                {
+                  type: 'mrkdwn',
+                  text: `*Email:*\n${email}`
+                }
+              ]
+            },
+            {
+              type: 'section',
+              fields: [
+                {
+                  type: 'mrkdwn',
+                  text: `*Phone:*\n${phone || 'Not provided'}`
+                },
+                {
+                  type: 'mrkdwn',
+                  text: `*Service:*\n${service || 'Not specified'}`
+                }
+              ]
+            },
+            {
+              type: 'section',
+              text: {
+                type: 'mrkdwn',
+                text: `*Message:*\n${message}`
+              }
+            }
+          ]
+        })
+      })
+
+      if (!slackResponse.ok) {
+        throw new Error('Failed to send Slack notification')
+      }
+
+      console.log('Slack notification sent successfully')
+    } catch (slackError) {
+      console.error('Slack notification error:', slackError)
+      // Don't fail the whole request if Slack fails
+    }
+
     return NextResponse.json(
       {
         success: true,
@@ -54,13 +119,12 @@ export async function POST(request: Request) {
       { status: 200 }
     )
   } catch (error: any) {
-    console.error('Contact form error:', error)
+    console.error('API Error:', error)
     return NextResponse.json(
       {
         success: false,
         error: 'Failed to send message',
-        details:
-          error?.response?.body?.errors?.[0]?.message || error.message
+        details: error.message
       },
       { status: 500 }
     )

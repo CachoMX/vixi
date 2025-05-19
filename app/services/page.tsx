@@ -232,7 +232,7 @@ export default function Services() {
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 <span>
-                  Nuestro servicio de diseño gráfico está enfocado en construir una imagen sólida, memorable y profesional para tu marca. Desde la creación de logotipos hasta presentaciones corporativas, trabajamos contigo para comunicar visualmente lo que te hace único en el mercado.
+                  Our graphic design service focuses on building a solid, memorable, and professional image for your brand. From logo creation to corporate presentations, we work with you to visually communicate what makes you unique in the market.
                 </span>
               </p>
 

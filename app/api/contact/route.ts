@@ -2,45 +2,66 @@
 import { NextResponse } from 'next/server'
 import sgMail from '@sendgrid/mail'
 
-// Initialize SendGrid with API key from environment variable
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!)
+if (!process.env.SENDGRID_API_KEY) {
+  console.error('SendGrid API key is missing')
+  throw new Error('SendGrid configuration error')
+}
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, message, phone } = body
+    const { fullName, email, phone, service, message } = body
 
-    // Email to your team via SendGrid
-    await sgMail.send({
+    // Validate required fields
+    if (!fullName || !email || !message) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Missing required fields',
+          details: 'Please fill in all required fields'
+        },
+        { status: 400 }
+      )
+    }
+
+    const msg = {
       to: 'info@vixi.agency',
-      from: 'noreply@vixi.agency',
-      subject: `New Contact Form Submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+      from: {
+        email: 'noreply@vixi.agency',
+        name: 'Vixi Contact Form'
+      },
+      subject: `New Contact Form Submission from ${fullName}`,
+      text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Name:</strong> ${fullName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Service:</strong> ${service}</p>
         <p><strong>Message:</strong> ${message}</p>
       `
-    })
+    }
 
-    // Notification to Slack
-    await fetch(process.env.SLACK_WEBHOOK_URL!, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        text: `New Contact Form Submission\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
-      })
-    })
+    await sgMail.send(msg)
 
-    return NextResponse.json({ message: 'Success' }, { status: 200 })
-  } catch (error) {
-    console.error('Error:', error)
     return NextResponse.json(
-      { error: 'Failed to send message' },
+      {
+        success: true,
+        message: 'Message sent successfully'
+      },
+      { status: 200 }
+    )
+  } catch (error: any) {
+    console.error('Contact form error:', error)
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'Failed to send message',
+        details:
+          error?.response?.body?.errors?.[0]?.message || error.message
+      },
       { status: 500 }
     )
   }

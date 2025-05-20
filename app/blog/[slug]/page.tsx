@@ -16,13 +16,12 @@ interface Post {
   content: string
 }
 
-// Define types that match Next.js's internal types
-interface PageParams {
-  slug: string
-}
-
-interface PageProps {
-  params: PageParams
+// Updated type definition to match Next.js expectations
+type PageProps = {
+  params: {
+    slug: string
+  }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 export default async function BlogPost({ params }: PageProps) {

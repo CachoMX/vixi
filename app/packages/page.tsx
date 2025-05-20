@@ -44,7 +44,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
         price: "$325/month",
         setupFee: "+ $500 Initiation & Setup", // Has setupFee
         description: "Robust online presence with ongoing care & 1 monthly blog post.",
-        features: ["Up to 20 Pages", "1 SEO Blog Post/Mo", "Content Updates (2.5hrs)", "Full Maintenance"],
+        features: ["Up to 10 Pages", "1 SEO Blog Post/Mo", "Content Updates (2.5hrs)", "Full Maintenance"],
         ctaLink: "/contact?service=website-essentials",
         ctaText: "Choose Essentials",
       },

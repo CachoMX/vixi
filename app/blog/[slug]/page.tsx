@@ -1,20 +1,32 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getBlogPost } from '@/lib/blog'
+import { getBlogPost } from '@/lib/blog' // Assuming this is correctly typed to return a Post or null/undefined
 import { CalendarDays, Tag } from 'lucide-react'
 import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
 
-// Define proper types for params
-interface PageParams {
-  params: {
-    slug: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
+// Define the expected shape of your blog post data
+interface Post {
+  title: string;
+  date: string; // Or Date
+  formattedDate: string;
+  category: string;
+  image: string;
+  description: string;
+  content: string; // HTML string
+  // Add any other properties your post object has
 }
 
-export default async function BlogPost({ params }: PageParams) {
-  const post = await getBlogPost(params.slug)
+// Define the props for your page component
+interface BlogPostPageProps {
+  params: {
+    slug: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default async function BlogPost({ params }: BlogPostPageProps) {
+  const post: Post | undefined = await getBlogPost(params.slug) // Add type for post
 
   if (!post) {
     notFound()
@@ -50,19 +62,29 @@ export default async function BlogPost({ params }: PageParams) {
         </div>
 
         {/* Post Content */}
-        <div 
+        <div
           className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }} 
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </article>
     </main>
   )
 }
 
+// Props for generateMetadata are often the same as page props
+interface GenerateMetadataProps {
+  params: {
+    slug: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
 // Add generateMetadata for dynamic metadata
-export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
-  const post = await getBlogPost(params.slug)
-  
+export async function generateMetadata(
+  { params }: GenerateMetadataProps // Use the specific props type here
+): Promise<Metadata> {
+  const post: Post | undefined = await getBlogPost(params.slug) // Add type for post
+
   if (!post) {
     return {
       title: 'Post Not Found',
@@ -73,5 +95,11 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   return {
     title: post.title,
     description: post.description,
+    // You can also add Open Graph metadata, etc.
+    // openGraph: {
+    //   title: post.title,
+    //   description: post.description,
+    //   images: [{ url: post.image }],
+    // },
   }
 }

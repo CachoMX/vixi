@@ -237,30 +237,35 @@ const services = [
     href: "/services/website-design",
     description: "Custom WordPress websites with ongoing support",
     label: "Starting at $325/mo",
+    isNew: false,
   },
   {
     title: "Social Media Management",
     href: "/services/social-media-management",
     description: "Strategic content creation and community management",
     label: "Starting at $1,500/mo",
+    isNew: false,
   },
   {
     title: "Ads Management",
     href: "/services/ads-management",
     description: "Expert Facebook & Google Ads management",
     label: "Starting at $650/mo",
+    isNew: false,
   },
   {
     title: "Monthly Graphic Design",
     href: "/services/monthly-graphic-design",
     description: "Professional design services on a monthly retainer",
     label: "Starting at $325/mo",
+    isNew: false,
   },
   {
     title: "Hyros & Marketing Automation",
     href: "/services/hyros-marketing-automation",
     description: "Expert Hyros setup and workflow automation",
     label: "Starting at $500",
+    isNew: false,
   },
 ]
 

@@ -8,6 +8,7 @@ import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import { Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// Complete list of services that matches the ones in the layout.tsx
 const services = [
   {
     title: "Website Design & Maintenance",
@@ -16,15 +17,42 @@ const services = [
     label: "Starting at $325/mo",
     isNew: true,
   },
-  // ...existing services...
-]
+  {
+    title: "Social Media Management",
+    href: "/services/social-media-management",
+    description: "Strategic content creation and community management",
+    label: "Starting at $525/mo",
+    isNew: true,
+  },
+  {
+    title: "Ads Management",
+    href: "/services/ads-management",
+    description: "Expert Facebook & Google Ads management",
+    label: "Starting at $650/mo",
+    isNew: true,
+  },
+  {
+    title: "Monthly Graphic Design",
+    href: "/services/monthly-graphic-design",
+    description: "Professional design services on a monthly retainer",
+    label: "Starting at $325/mo",
+    isNew: true,
+  },
+  {
+    title: "Hyros & Marketing Automation",
+    href: "/services/hyros-marketing-automation",
+    description: "Expert Hyros setup and workflow automation",
+    label: "Starting at $500",
+    isNew: true,
+  },
+];
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   return (
-    <div className="lg:hidden">
+    <div className="md:hidden">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 text-gray-600"

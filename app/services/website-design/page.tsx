@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function WebsiteDesignPage() {
   const essentialsFeatures = [
-    "Professionally Designed WordPress Website (Up to 20 pages)",
+    "Professionally Designed WordPress Website (Up to 10 pages)",
     "Mobile-Responsive & SEO-Friendly Design",
     "1 SEO-Optimized Blog Post/Month (approx. 500-750 words, topic research, copywriting, licensed stock image, on-page SEO)",
     "Up to 5 'Minimum Changes'/Month (e.g., text edits, image swaps - approx. 2.5 total hours)",

@@ -5,6 +5,18 @@ import { Check, ArrowRight, Package, DollarSign, Users, Lightbulb, Phone } from 
 import Link from 'next/link'
 import Image from 'next/image'
 
+interface PackageType {
+  name: string;
+  price: string;
+  priceSuffix?: string; // Optional property
+  setupFee?: string; // Optional property
+  description: string;
+  features: string[];
+  ctaLink: string;
+  ctaText: string;
+  popular?: boolean;
+}
+
 export const metadata = {
   title: "Digital Marketing Packages Dallas | Vixi Agency | Transparent Pricing",
   description: "Explore Vixi Agency's digital marketing packages in Dallas. Affordable, high-value solutions for website design, SEO, social media, ads, and graphic design. View our plans and get started today!",
@@ -15,7 +27,7 @@ const serviceCategories = [
   {
     categoryTitle: "Website Design & Maintenance",
     categoryDescription: "Professional WordPress websites built for performance and maintained for peace of mind. Perfect for Dallas businesses looking for a strong online foundation.",
-    servicePageLink: "/services/website-design", // Update with your actual service page URL
+    servicePageLink: "/services/website-design",
     packages: [
       {
         name: "Website Essentials",

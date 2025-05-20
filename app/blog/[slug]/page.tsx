@@ -5,7 +5,6 @@ import { CalendarDays, Tag } from 'lucide-react'
 import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
 
-// Define the expected shape of your blog post data
 interface Post {
   title: string
   date: string
@@ -16,16 +15,13 @@ interface Post {
   content: string
 }
 
-// Updated type definition to match Next.js expectations
-type PageProps = {
-  params: {
-    slug: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
-}
+// Import the exact type from Next.js
+import type { PageProps as NextPageProps } from '@/.next/types/app/blog/[slug]/page'
 
-export default async function BlogPost({ params }: PageProps) {
-  const post: Post | undefined = await getBlogPost(params.slug) // Add type for post
+// Use the imported type
+export default async function BlogPost(props: NextPageProps) {
+  const { slug } = await props.params
+  const post = await getBlogPost(slug)
 
   if (!post) {
     notFound()
@@ -70,19 +66,11 @@ export default async function BlogPost({ params }: PageProps) {
   )
 }
 
-// Props for generateMetadata are often the same as page props
-interface GenerateMetadataProps {
-  params: {
-    slug: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
-}
-
-// Add generateMetadata for dynamic metadata
 export async function generateMetadata(
-  { params }: GenerateMetadataProps // Use the specific props type here
+  props: NextPageProps
 ): Promise<Metadata> {
-  const post: Post | undefined = await getBlogPost(params.slug) // Add type for post
+  const { slug } = await props.params
+  const post = await getBlogPost(slug)
 
   if (!post) {
     return {
@@ -93,12 +81,6 @@ export async function generateMetadata(
 
   return {
     title: post.title,
-    description: post.description,
-    // You can also add Open Graph metadata, etc.
-    // openGraph: {
-    //   title: post.title,
-    //   description: post.description,
-    //   images: [{ url: post.image }],
-    // },
+    description: post.description
   }
 }

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://vixiagency.com',
+  siteUrl: process.env.SITE_URL || 'https://vixi.agency',
   generateRobotsTxt: true,
   exclude: [
     '/careers',
@@ -21,13 +21,6 @@ module.exports = {
       'ads-management',
       'monthly-graphic-design',
       'hyros-marketing-automation',
-      // Previous services - if these pages actually exist
-      'web-development',
-      'digital-advertising',
-      'social-media',
-      'seo',
-      'graphic-design',
-      'automation'
     ];
 
     const servicesPaths = servicePages.map(service => ({

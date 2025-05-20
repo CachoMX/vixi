@@ -5,14 +5,16 @@ import { CalendarDays, Tag } from 'lucide-react'
 import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
 
+// Update Post interface to match getBlogPost return type
 interface Post {
   title: string
+  description: string
   date: string
   formattedDate: string
   category: string
   image: string
-  description: string
   content: string
+  slug: string
 }
 
 // Import the exact type from Next.js
@@ -21,7 +23,7 @@ import type { PageProps as NextPageProps } from '@/.next/types/app/blog/[slug]/p
 // Use the imported type
 export default async function BlogPost(props: NextPageProps) {
   const { slug } = await props.params
-  const post = await getBlogPost(slug)
+  const post = (await getBlogPost(slug)) as Post
 
   if (!post) {
     notFound()

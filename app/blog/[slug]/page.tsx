@@ -5,26 +5,14 @@ import { CalendarDays, Tag } from 'lucide-react'
 import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
 
-interface BlogPostParams {
+// Define proper types for params
+interface PageParams {
   params: {
     slug: string
   }
 }
 
-export async function generateMetadata({ params }: BlogPostParams): Promise<Metadata> {
-  const post = await getBlogPost(params.slug)
-  
-  if (!post) {
-    return { title: 'Post Not Found' }
-  }
-
-  return {
-    title: `${post.title} | Vixi Agency Blog`,
-    description: post.description
-  }
-}
-
-export default async function BlogPost({ params }: BlogPostParams) {
+export default async function BlogPost({ params }: PageParams) {
   const post = await getBlogPost(params.slug)
 
   if (!post) {
@@ -68,4 +56,21 @@ export default async function BlogPost({ params }: BlogPostParams) {
       </article>
     </main>
   )
+}
+
+// Add generateMetadata for dynamic metadata
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+  const post = await getBlogPost(params.slug)
+  
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.'
+    }
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+  }
 }

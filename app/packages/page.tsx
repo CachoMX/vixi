@@ -8,13 +8,13 @@ import Image from 'next/image'
 interface PackageType {
   name: string;
   price: string;
-  priceSuffix?: string; // Optional property
-  setupFee?: string; // Optional property
+  priceSuffix?: string;  // Optional suffix for price display
+  setupFee?: string;     // Optional setup fee
   description: string;
   features: string[];
   ctaLink: string;
   ctaText: string;
-  popular?: boolean;
+  popular?: boolean;     // Optional popular flag
 }
 
 export const metadata = {

@@ -5,43 +5,53 @@ import { Check, ArrowRight, Package, DollarSign, Users, Lightbulb, Phone } from 
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface PackageType {
-  name: string;
-  price: string;
-  priceSuffix?: string;  // Optional suffix for price display
-  setupFee?: string;     // Optional setup fee
-  description: string;
-  features: string[];
-  ctaLink: string;
-  ctaText: string;
-  popular?: boolean;     // Optional popular flag
-}
-
 export const metadata = {
   title: "Digital Marketing Packages Dallas | Vixi Agency | Transparent Pricing",
   description: "Explore Vixi Agency's digital marketing packages in Dallas. Affordable, high-value solutions for website design, SEO, social media, ads, and graphic design. View our plans and get started today!",
 }
 
+// Define TypeScript interfaces for better type safety (optional but recommended)
+interface PackageInfo {
+  name: string;
+  price: string;
+  setupFee?: string; // Optional: not all packages have a setup fee
+  priceSuffix?: string; // Optional: not all packages have a price suffix
+  description: string;
+  features: string[];
+  ctaLink: string;
+  ctaText: string;
+  popular?: boolean; // Optional
+}
+
+interface ServiceCategoryInfo {
+  categoryTitle: string;
+  categoryDescription: string;
+  servicePageLink: string;
+  setupFeeNote?: string; // Optional: for categories like Ads
+  packages: PackageInfo[];
+}
+
+
 // Define package data centrally for easier management
-const serviceCategories = [
+const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
   {
     categoryTitle: "Website Design & Maintenance",
     categoryDescription: "Professional WordPress websites built for performance and maintained for peace of mind. Perfect for Dallas businesses looking for a strong online foundation.",
-    servicePageLink: "/services/website-design",
+    servicePageLink: "/services/website-design-maintenance",
     packages: [
       {
         name: "Website Essentials",
         price: "$325/month",
-        setupFee: "+ $500 Initiation & Setup",
+        setupFee: "+ $500 Initiation & Setup", // Has setupFee
         description: "Robust online presence with ongoing care & 1 monthly blog post.",
-        features: ["Up to 10 Pages", "1 SEO Blog Post/Mo", "Content Updates (2.5hrs)", "Full Maintenance"],
+        features: ["Up to 20 Pages", "1 SEO Blog Post/Mo", "Content Updates (2.5hrs)", "Full Maintenance"],
         ctaLink: "/contact?service=website-essentials",
         ctaText: "Choose Essentials",
       },
       {
         name: "Website Growth",
         price: "$575/month",
-        setupFee: "+ $500 Initiation & Setup",
+        setupFee: "+ $500 Initiation & Setup", // Has setupFee
         description: "Enhanced content strategy, more updates, and in-depth support.",
         features: ["Up to 20 Pages", "1-2 SEO Blog Posts/Mo", "Content Updates (4-5hrs)", "Advanced Maintenance"],
         ctaLink: "/contact?service=website-growth",
@@ -58,6 +68,7 @@ const serviceCategories = [
       {
         name: "Social Starter",
         price: "$525/month",
+        // No setupFee, No priceSuffix
         description: "Consistent foundational presence on 1-2 platforms.",
         features: ["1-2 Platforms", "2-3 Posts/Week/Platform", "Custom Graphics", "Basic Reporting"],
         ctaLink: "/contact?package=social-starter",
@@ -66,6 +77,7 @@ const serviceCategories = [
       {
         name: "Social Growth",
         price: "$950/month",
+        // No setupFee, No priceSuffix
         description: "Actively grow engagement across 2-3 platforms with more content.",
         features: ["2-3 Platforms", "3-4 Posts/Week/Platform", "Story Creation", "Detailed Reporting"],
         ctaLink: "/contact?package=social-growth",
@@ -75,6 +87,7 @@ const serviceCategories = [
       {
         name: "Social Pro",
         price: "$1625/month",
+        // No setupFee, No priceSuffix
         description: "Comprehensive management for maximum social media impact & ROI.",
         features: ["3-4 Platforms", "4-5+ Posts/Week/Platform", "Advanced Content", "Strategy Calls"],
         ctaLink: "/contact?package=social-pro",
@@ -85,13 +98,14 @@ const serviceCategories = [
   {
     categoryTitle: "Facebook & Google Ads Management",
     categoryDescription: "Drive qualified leads and maximize your ROI with expertly managed paid advertising campaigns tailored for the Dallas market.",
-    servicePageLink: "/services/ads-management", // Update with your actual service page URL
+    servicePageLink: "/services/ads-management",
     setupFeeNote: "Note: A one-time campaign setup fee of $300-$750 may apply for new accounts.",
     packages: [
       {
         name: "Ads Launchpad",
         price: "$650/mo",
-        priceSuffix: "Mgmt Fee + Ad Spend",
+        priceSuffix: "Mgmt Fee + Ad Spend", // Has priceSuffix
+        // No setupFee directly on package, it's a category note
         description: "Ideal for starting with paid ads on one primary platform.",
         features: ["1 Ad Platform", "For Ad Spends ~$1k-$2.5k/mo", "Full Campaign Setup & Mgmt", "Monthly Reporting"],
         ctaLink: "/contact?package=ads-launchpad",
@@ -100,7 +114,7 @@ const serviceCategories = [
       {
         name: "Ads Accelerator",
         price: "$1175/mo",
-        priceSuffix: "Mgmt Fee + Ad Spend",
+        priceSuffix: "Mgmt Fee + Ad Spend", // Has priceSuffix
         description: "Scale across 1-2 platforms with more aggressive growth targets.",
         features: ["1-2 Ad Platforms", "For Ad Spends ~$2.5k-$7.5k/mo", "A/B Testing", "Detailed Reporting"],
         ctaLink: "/contact?package=ads-accelerator",
@@ -110,7 +124,7 @@ const serviceCategories = [
       {
         name: "Ads Dominator",
         price: "Starting at $2250/mo",
-        priceSuffix: "Mgmt Fee + Ad Spend",
+        priceSuffix: "Mgmt Fee + Ad Spend", // Has priceSuffix
         description: "Comprehensive multi-platform management for market leadership.",
         features: ["2-3+ Ad Platforms", "For Ad Spends $7.5k+/mo", "Advanced Strategies", "Strategy Calls"],
         ctaLink: "/contact?package=ads-dominator",
@@ -121,11 +135,12 @@ const serviceCategories = [
   {
     categoryTitle: "Monthly Graphic Design Services",
     categoryDescription: "Keep your Dallas brand looking sharp with a consistent stream of professional social media graphics and digital assets.",
-    servicePageLink: "/services/graphic-design", // Update with your actual service page URL
+    servicePageLink: "/services/graphic-design",
     packages: [
       {
         name: "Visual Spark",
         price: "$325/month",
+        // No setupFee, No priceSuffix
         description: "Maintain a consistent visual presence on key social channels.",
         features: ["Up to 4 Quick Social Graphics", "2 Revisions/Graphic", "Source Files Included", "Brand Aligned"],
         ctaLink: "/contact?package=visual-spark",
@@ -134,6 +149,7 @@ const serviceCategories = [
       {
         name: "Visual Boost",
         price: "$600/month",
+        // No setupFee, No priceSuffix
         description: "For more active channels or diverse digital marketing visual needs.",
         features: ["Up to 10 Quick Social Graphics", "2 Revisions/Graphic", "Source Files Included", "Versatile Use"],
         ctaLink: "/contact?package=visual-boost",
@@ -145,12 +161,13 @@ const serviceCategories = [
   {
     categoryTitle: "Hyros Setup & Marketing Automation",
     categoryDescription: "Unlock precise ad tracking with Hyros and streamline your Dallas business operations with powerful marketing automation.",
-    servicePageLink: "/services/hyros-marketing-automation", // Update with your actual service page URL
+    servicePageLink: "/services/hyros-marketing-automation",
     packages: [
       {
         name: "Hyros Setup Service",
         price: "$500",
-        priceSuffix: "One-Time Fee",
+        priceSuffix: "One-Time Fee", // Has priceSuffix
+        // No setupFee
         description: "Expert implementation of Hyros for accurate ad tracking and reliable data.",
         features: ["Initial Consultation", "Account Configuration", "Tracking Script Guidance", "Integration Check"],
         ctaLink: "/contact?service=hyros-setup",
@@ -159,7 +176,8 @@ const serviceCategories = [
       {
         name: "Marketing Automation Consulting",
         price: "Custom",
-        priceSuffix: "Monthly Retainer",
+        priceSuffix: "Monthly Retainer", // Has priceSuffix
+        // No setupFee
         description: "Tailored automation strategies to streamline workflows and scale operations.",
         features: ["Custom Strategy", "Workflow Design", "Platform Integration", "Ongoing Support"],
         ctaLink: "/contact?service=automation-consulting",
@@ -213,11 +231,13 @@ export default function PackagesPage() {
                       MOST POPULAR
                     </div>
                   )}
-                  <CardHeader className={`pt-8 ${pkg.popular ? 'pt-12' : 'pt-8'}`}>
+                  <CardHeader className={`pt-8 ${pkg.popular ? 'pt-12' : 'pt-8'}`}> {/* Adjusted padding for popular badge */}
                     <CardTitle className="text-2xl font-semibold text-primary-blue mb-2 text-center">{pkg.name}</CardTitle>
                     <div className="text-center mb-3">
                         <span className="text-4xl font-bold text-gray-800">{pkg.price}</span>
+                        {/* Conditional rendering for priceSuffix */}
                         {pkg.priceSuffix && <span className="text-lg font-normal text-gray-500"> {pkg.priceSuffix}</span>}
+                        {/* Conditional rendering for setupFee */}
                         {pkg.setupFee && <p className="text-xs text-gray-500 mt-1">{pkg.setupFee}</p>}
                     </div>
                     <CardDescription className="text-gray-600 text-sm text-center h-12">{pkg.description}</CardDescription>

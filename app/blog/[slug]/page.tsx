@@ -1,31 +1,30 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getBlogPost } from '@/lib/blog' // Assuming this is correctly typed to return a Post or null/undefined
+import { getBlogPost } from '@/lib/blog'
 import { CalendarDays, Tag } from 'lucide-react'
 import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
 
 // Define the expected shape of your blog post data
 interface Post {
-  title: string;
-  date: string; // Or Date
-  formattedDate: string;
-  category: string;
-  image: string;
-  description: string;
-  content: string; // HTML string
-  // Add any other properties your post object has
+  title: string
+  date: string
+  formattedDate: string
+  category: string
+  image: string
+  description: string
+  content: string
 }
 
-// Define the props for your page component
-interface BlogPostPageProps {
+// Update to use a single interface for both page and metadata
+type PageProps = {
   params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+    slug: string
+  }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
-export default async function BlogPost({ params }: BlogPostPageProps) {
+export default async function BlogPost({ params }: PageProps) {
   const post: Post | undefined = await getBlogPost(params.slug) // Add type for post
 
   if (!post) {
@@ -74,9 +73,9 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
 // Props for generateMetadata are often the same as page props
 interface GenerateMetadataProps {
   params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+    slug: string
+  }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 // Add generateMetadata for dynamic metadata

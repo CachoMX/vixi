@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://vixiagency.com
+Host: https://vixi.agency
 
 # Sitemaps
-Sitemap: https://vixiagency.com/sitemap.xml
+Sitemap: https://vixi.agency/sitemap.xml

@@ -4,6 +4,7 @@ import { getAllBlogPosts } from "@/lib/blog"
 import { BLOG_CATEGORIES } from "@/config/blog"
 import Link from "next/link"
 import { BlogSearch } from '@/components/blog-search'
+import type { BlogPost } from "@/types/blog"
 
 export const metadata: Metadata = {
   title: "Digital Marketing Blog | Vixi Agency",
@@ -70,7 +71,7 @@ export default async function BlogPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12">Featured Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post) => (
+            {featuredPosts.map((post: BlogPost) => (
               <BlogCard
                 key={post.slug}
                 title={post.title}
@@ -90,7 +91,17 @@ export default async function BlogPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12">Latest Posts</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Add latest blog posts here */}
+            {latestPosts.map((post: BlogPost) => (
+              <BlogCard
+                key={post.slug}
+                title={post.title}
+                description={post.description}
+                category={post.category}
+                slug={post.slug}
+                date={post.formattedDate}
+                imageUrl={post.image}
+              />
+            ))}
           </div>
         </div>
       </section>

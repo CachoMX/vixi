@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
-interface BlogCardProps {
+export interface BlogCardProps {
   title: string
   description: string
   category: string
@@ -23,7 +23,7 @@ export function BlogCard({ title, description, category, slug, date, imageUrl }:
         />
       </div>
       <CardHeader>
-        <div className="text-sm text-primary-blue mb-2">{category}</div>
+        <div className="text-sm text-primary-blue mb-2">{category.replace(/-/g, ' ')}</div>
         <CardTitle className="mb-2">
           <Link href={`/blog/${slug}`} className="hover:text-primary-blue">
             {title}

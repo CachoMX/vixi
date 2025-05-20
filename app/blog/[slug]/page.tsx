@@ -4,24 +4,36 @@ import { getBlogPost } from '@/lib/blog'
 import { CalendarDays, Tag } from 'lucide-react'
 import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
+import type { BlogPost } from '@/types/blog'
 
-// Define Post interface
-interface Post {
-  title: string
-  description: string
-  date: string
-  formattedDate: string
-  category: string
-  image: string
-  content: string
-  slug: string
+type BlogPostParams = {
+  params: {
+    slug: string
+  }
 }
 
-import type { PageProps as NextPageProps } from '@/.next/types/app/blog/[slug]/page'
+export async function generateMetadata(
+  { params }: BlogPostParams
+): Promise<Metadata> {
+  const { slug } = params
+  const post = await getBlogPost(slug)
 
-export default async function BlogPost(props: NextPageProps) {
-  const { slug } = await props.params
-  const post = (await getBlogPost(slug)) as Post
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.'
+    }
+  }
+
+  return {
+    title: post.title,
+    description: post.description
+  }
+}
+
+export default async function BlogPostPage({ params }: BlogPostParams) {
+  const { slug } = params
+  const post = await getBlogPost(slug)
 
   if (!post) {
     notFound()
@@ -64,23 +76,4 @@ export default async function BlogPost(props: NextPageProps) {
       </article>
     </main>
   )
-}
-
-export async function generateMetadata(
-  props: NextPageProps
-): Promise<Metadata> {
-  const { slug } = await props.params
-  const post = (await getBlogPost(slug)) as Post
-
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-      description: 'The requested blog post could not be found.'
-    }
-  }
-
-  return {
-    title: post.title,
-    description: post.description
-  }
 }

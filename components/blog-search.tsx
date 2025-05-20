@@ -1,35 +1,39 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Search } from 'lucide-react'
 import { BlogCard } from './blog-card'
 import { useDebounce } from '@/hooks/use-debounce'
+import type { BlogPost } from '@/types/blog'
 
 export function BlogSearch() {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState<BlogPost[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const debouncedQuery = useDebounce(query, 300)
 
-  const searchPosts = async (searchQuery: string) => {
-    if (!searchQuery) {
-      setResults([])
-      return
+  useEffect(() => {
+    const searchPosts = async (searchQuery: string) => {
+      if (!searchQuery.trim()) {
+        setResults([])
+        return
+      }
+
+      setIsLoading(true)
+      try {
+        const res = await fetch(`/api/blog/search?q=${encodeURIComponent(searchQuery)}`)
+        if (!res.ok) throw new Error('Search failed')
+        
+        const data = await res.json()
+        setResults(data.posts || [])
+      } catch (error) {
+        console.error('Search error:', error)
+        setResults([])
+      } finally {
+        setIsLoading(false)
+      }
     }
 
-    setIsLoading(true)
-    try {
-      const res = await fetch(`/api/blog/search?q=${encodeURIComponent(searchQuery)}`)
-      const data = await res.json()
-      setResults(data.posts)
-    } catch (error) {
-      console.error('Search error:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
-
-  useState(() => {
     searchPosts(debouncedQuery)
   }, [debouncedQuery])
 
@@ -55,8 +59,22 @@ export function BlogSearch() {
       {results.length > 0 && (
         <div className="mt-8 grid gap-6">
           {results.map((post) => (
-            <BlogCard key={post.slug} {...post} />
+            <BlogCard 
+              key={post.slug}
+              title={post.title}
+              description={post.description}
+              category={post.category}
+              slug={post.slug}
+              date={post.formattedDate}
+              imageUrl={post.image}
+            />
           ))}
+        </div>
+      )}
+      
+      {query && !isLoading && results.length === 0 && (
+        <div className="mt-8 text-center text-gray-600">
+          No posts found matching your search criteria.
         </div>
       )}
     </div>

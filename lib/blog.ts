@@ -61,3 +61,9 @@ export async function getBlogPost(slug: string) {
     return null
   }
 }
+
+// Add a new function specifically for category filtering if needed
+export async function getBlogPostsByCategory(category: string) {
+  const posts = await getAllBlogPosts()
+  return posts.filter(post => post.category === category)
+}

@@ -1,8 +1,6 @@
 import { Metadata } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 import { BlogCard } from '@/components/blog-card'
-
-// Import the exact type from Next.js
 import type { PageProps as NextPageProps } from '@/.next/types/app/blog/category/[category]/page'
 
 const categoryNames = {
@@ -27,7 +25,8 @@ export async function generateMetadata(
 
 export default async function CategoryPage(props: NextPageProps) {
   const { category } = await props.params
-  const posts = await getAllBlogPosts(category)
+  const allPosts = await getAllBlogPosts()
+  const posts = allPosts.filter(post => post.category === category)
 
   return (
     <main className="min-h-screen pt-24">

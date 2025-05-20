@@ -37,7 +37,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
   {
     categoryTitle: "Website Design & Maintenance",
     categoryDescription: "Professional WordPress websites built for performance and maintained for peace of mind. Perfect for Dallas businesses looking for a strong online foundation.",
-    servicePageLink: "/services/website-design-maintenance",
+    servicePageLink: "/services/website-design",
     packages: [
       {
         name: "Website Essentials",

@@ -3,10 +3,9 @@ import { getAllBlogPosts } from '@/lib/blog'
 import { BlogCard } from '@/components/blog-card'
 import { BlogPost } from '@/types/blog'
 
-type CategoryParams = {
-  params: {
-    category: string
-  }
+// Define params interface that matches Next.js App Router expectations
+type PageProps = {
+  params: Promise<{ category: string }>
 }
 
 const categoryNames: Record<string, string> = {
@@ -19,9 +18,9 @@ const categoryNames: Record<string, string> = {
 }
 
 export async function generateMetadata(
-  { params }: CategoryParams
+  props: PageProps
 ): Promise<Metadata> {
-  const { category } = params
+  const { category } = await props.params
   const categoryName = categoryNames[category] || category.replace(/-/g, ' ')
 
   return {
@@ -30,8 +29,8 @@ export async function generateMetadata(
   }
 }
 
-export default async function CategoryPage({ params }: CategoryParams) {
-  const { category } = params
+export default async function CategoryPage(props: PageProps) {
+  const { category } = await props.params
   const allPosts = await getAllBlogPosts()
   const posts = allPosts.filter(post => post.category === category)
   const categoryName = categoryNames[category] || category.replace(/-/g, ' ')

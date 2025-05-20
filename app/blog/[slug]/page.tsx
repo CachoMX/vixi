@@ -6,16 +6,15 @@ import { BlogPostHeader } from '@/components/blog-post-header'
 import Image from 'next/image'
 import type { BlogPost } from '@/types/blog'
 
-type BlogPostParams = {
-  params: {
-    slug: string
-  }
+// Define params interface that matches Next.js App Router expectations
+type PageProps = {
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata(
-  { params }: BlogPostParams
+  props: PageProps
 ): Promise<Metadata> {
-  const { slug } = params
+  const { slug } = await props.params
   const post = await getBlogPost(slug)
 
   if (!post) {
@@ -26,13 +25,13 @@ export async function generateMetadata(
   }
 
   return {
-    title: post.title,
+    title: `${post.title} | Vixi Agency Blog`,
     description: post.description
   }
 }
 
-export default async function BlogPostPage({ params }: BlogPostParams) {
-  const { slug } = params
+export default async function BlogPostPage(props: PageProps) {
+  const { slug } = await props.params
   const post = await getBlogPost(slug)
 
   if (!post) {

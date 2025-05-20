@@ -1,13 +1,9 @@
 import { Metadata } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 import { BlogCard } from '@/components/blog-card'
-import { notFound } from 'next/navigation'
 
-interface CategoryPageProps {
-  params: {
-    category: string
-  }
-}
+// Import the exact type from Next.js
+import type { PageProps as NextPageProps } from '@/.next/types/app/blog/category/[category]/page'
 
 const categoryNames = {
   'web-development': 'Web Development',
@@ -18,43 +14,35 @@ const categoryNames = {
   'automation': 'Automation'
 }
 
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const category = categoryNames[params.category as keyof typeof categoryNames]
-  
-  if (!category) {
-    return {
-      title: 'Category Not Found'
-    }
-  }
+export async function generateMetadata(
+  props: NextPageProps
+): Promise<Metadata> {
+  const { category } = await props.params
 
   return {
-    title: `${category} Articles | Vixi Agency Blog`,
-    description: `Expert insights and guides about ${category.toLowerCase()} from Vixi Agency.`
+    title: `${category.replace('-', ' ')} Blog Posts | Vixi Agency`,
+    description: `Read our blog posts about ${category.replace('-', ' ')}`
   }
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
-  const posts = await getAllBlogPosts()
-  const categoryPosts = posts.filter(post => post.category === params.category)
-
-  if (!categoryNames[params.category as keyof typeof categoryNames]) {
-    notFound()
-  }
+export default async function CategoryPage(props: NextPageProps) {
+  const { category } = await props.params
+  const posts = await getAllBlogPosts(category)
 
   return (
     <main className="min-h-screen pt-24">
       <div className="container mx-auto px-6">
         <header className="mb-12">
           <h1 className="text-4xl font-bold mb-4">
-            {categoryNames[params.category as keyof typeof categoryNames]}
+            {categoryNames[category as keyof typeof categoryNames]}
           </h1>
           <p className="text-xl text-gray-600">
-            Latest articles and insights about {params.category.replace('-', ' ')}
+            Latest articles and insights about {category.replace('-', ' ')}
           </p>
         </header>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categoryPosts.map((post) => (
+          {posts.map((post) => (
             <BlogCard
               key={post.slug}
               title={post.title}

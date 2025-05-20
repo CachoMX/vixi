@@ -16,12 +16,13 @@ interface Post {
   content: string
 }
 
-// Update to use a single interface for both page and metadata
-type PageProps = {
-  params: {
-    slug: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
+// Define types that match Next.js's internal types
+interface PageParams {
+  slug: string
+}
+
+interface PageProps {
+  params: PageParams
 }
 
 export default async function BlogPost({ params }: PageProps) {

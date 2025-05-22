@@ -73,18 +73,18 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-blue via-blue-700 to-secondary-blue text-white pt-36 pb-24 md:pt-48 md:pb-32 text-center">
         <div className="container mx-auto px-6 relative z-10">
-          <AnimatedSection animationType="fadeInUp" delay={0.1}>
+          <div className="opacity-0 animate-fade-in stagger-1">
             <Award className="h-16 w-16 mx-auto mb-6 text-yellow-400" />
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
               Elevate Your Dallas Business with <span className="block sm:inline">Results-Driven Digital Marketing</span>
             </h1>
-          </AnimatedSection>
-          <AnimatedSection animationType="fadeInUp" delay={0.3}>
+          </div>
+          <div className="opacity-0 animate-fade-in stagger-2">
             <p className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto opacity-90">
               Vixi Agency is your trusted Dallas-based partner for high-value digital marketing solutions. We craft custom strategies in <strong className="font-semibold">Website Design, SEO, Social Media, Paid Ads (Google & Facebook), Hyros Tracking, and Marketing Automation</strong> to deliver measurable growth.
             </p>
-          </AnimatedSection>
-          <AnimatedSection animationType="fadeInUp" delay={0.5}>
+          </div>
+          <div className="opacity-0 animate-fade-in stagger-3">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg px-10 py-3 text-lg font-semibold" asChild >
                 <Link href="/contact?interest=free-proposal">
@@ -98,21 +98,21 @@ export default function HomePage() {
                 </Link>
               </Button>
             </div>
-          </AnimatedSection>
-          <AnimatedSection animationType="fadeInUp" delay={0.7}>
+          </div>
+          <div className="opacity-0 animate-fade-in stagger-4">
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-12 text-sm opacity-80">
               <div className="flex items-center"><Check className="h-5 w-5 mr-2 text-green-400" /> Dallas-Based Experts</div>
               <div className="flex items-center"><Check className="h-5 w-5 mr-2 text-green-400" /> Results-Focused Strategies</div>
               <div className="flex items-center"><Check className="h-5 w-5 mr-2 text-green-400" /> High-Value Service</div>
               <div className="flex items-center"><Check className="h-5 w-5 mr-2 text-green-400" /> Globally Serving Clients</div>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
         {/* Optional: Add a subtle background pattern or overlay if desired */}
       </section>
 
       {/* Who We Are & What We Do Section */}
-      <AnimatedSection animationType="fadeIn" threshold={0.3}>
+      <AnimatedSection>
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -149,7 +149,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Our Core Services Section */}
-      <AnimatedSection animationType="fadeIn" threshold={0.2}>
+      <AnimatedSection>
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -203,7 +203,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Why Partner With Vixi Agency Section */}
-      <AnimatedSection animationType="fadeIn" threshold={0.2}>
+      <AnimatedSection>
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -231,7 +231,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Hyros & Automation Highlight Section */}
-      <AnimatedSection animationType="fadeIn" threshold={0.3}>
+      <AnimatedSection>
         <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-primary-blue text-white">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -264,7 +264,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Statistics Section - Social Proof */}
-      <AnimatedSection animationType="fadeInUp" threshold={0.5}>
+      <AnimatedSection>
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
@@ -292,9 +292,6 @@ export default function HomePage() {
           </div>
         </section>
       </AnimatedSection>
-      
-
-      
 
       {/* Testimonials Placeholder Section 
       <AnimatedSection animationType="fadeIn" threshold={0.3}>
@@ -332,7 +329,7 @@ export default function HomePage() {
       </AnimatedSection>
 */}
       {/* Final Call to Action Section */}
-      <AnimatedSection animationType="fadeInUp" delay={0.2}>
+      <AnimatedSection>
         <section className="py-20 md:py-28 bg-gradient-to-br from-blue-800 via-primary-blue to-secondary-blue text-white">
           <div className="container mx-auto px-6 text-center">
             <Brain className="h-16 w-16 mx-auto mb-6 text-yellow-400" />

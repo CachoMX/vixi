@@ -24,7 +24,7 @@ const services = [
     icon: Globe,
     title: "Website Design & Maintenance",
     description: "Stunning, high-converting WordPress sites built for performance and maintained for peace of mind.",
-    link: "/services/website-design-maintenance",
+    link: "/services/website-design",
     features: ["Responsive Design", "SEO-Optimized", "Monthly Maintenance", "Blog Integration"],
   },
   {
@@ -45,7 +45,7 @@ const services = [
     icon: Palette,
     title: "Graphic Design Services",
     description: "Elevate your brand with consistent, professional visuals for all your digital marketing needs.",
-    link: "/services/graphic-design", // Ensure this matches your actual URL
+    link: "/services/monthly-graphic-design", // Ensure this matches your actual URL
     features: ["Brand Identity", "Social Media Graphics", "Marketing Materials", "Source Files"],
   },
   {

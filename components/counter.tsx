@@ -6,6 +6,7 @@ interface CounterProps {
   end: number;
   duration?: number;
   suffix?: string;
+  className?: string;
 }
 
 export const Counter = ({ end, duration = 2000, suffix = '' }: CounterProps) => {

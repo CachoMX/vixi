@@ -87,12 +87,13 @@ export default function HomePage() {
           <div className="opacity-0 animate-fade-in stagger-3">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-lg px-10 py-3 text-lg font-semibold" asChild >
+                
                 <Link href="/contact?interest=free-proposal">
                   Get Your Free Proposal
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-blue transform transition-all duration-300 hover:scale-105 px-10 py-3 text-lg font-semibold" asChild>
+              <Button size="lg" variant="outline" className="bg-transparent border-white border-2 text-white hover:bg-white hover:text-primary-blue transform transition-all duration-300 hover:scale-105 px-10 py-3 text-lg font-semibold" asChild>
                 <Link href="/services">
                   Explore Our Services
                 </Link>
@@ -241,7 +242,7 @@ export default function HomePage() {
                 <p className="text-lg opacity-90 mb-6 leading-relaxed">
                   Gain unparalleled clarity on your ad spend with our expert <strong className="font-semibold">Hyros setup and management</strong>. Understand your true ROI and customer journey. Plus, supercharge your operations with <strong className="font-semibold">custom marketing automation solutions</strong> (Zapier, Make) designed to save you time and scale your Dallas business effectively.
                 </p>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary-blue font-semibold" asChild>
+                <Button variant="outline" className="bg-transparent border-white border-2 text-white hover:bg-white hover:text-primary-blue font-semibold" asChild>
                   <Link href="/services/hyros-marketing-automation">
                     Explore Hyros & Automation
                     <ArrowRight className="ml-2 h-4 w-4" />

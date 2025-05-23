@@ -21,8 +21,35 @@ export const metadata: Metadata = {
     default: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
     template: "%s | Vixi Agency"
   },
-  description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services."
+  description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services for businesses in Dallas and worldwide.",
+  manifest: '/images/manifest.json',
+  icons: {
+    icon: [
+      { url: '/images/favicon.svg', type: 'image/svg+xml' },
+      { url: '/images/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/images/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/images/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/images/android-icon-192x192.png', type: 'image/png', sizes: '192x192' }
+    ],
+    apple: [
+      { url: '/images/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' },
+      { url: '/images/apple-icon-60x60.png', sizes: '60x60', type: 'image/png' },
+      { url: '/images/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' },
+      { url: '/images/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' },
+      { url: '/images/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' },
+      { url: '/images/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' },
+      { url: '/images/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' },
+      { url: '/images/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
+      { url: '/images/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' }
+    ]
+  },
+  themeColor: '#ffffff',
+  other: {
+    "msapplication-TileColor": "#ffffff",
+    "msapplication-TileImage": "/images/ms-icon-144x144.png"
+  }
 }
+
 
 const schemaData = {
   "@context": "https://schema.org",

@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Facebook & Google Ads Management Dallas | Drive Growth | Vixi Agency",
-  description: "Expert Facebook & Google Ads management in Dallas. Vixi Agency delivers targeted campaigns, measurable ROI, and business growth. Management fees from $650/mo.",
+  description: "Expert Facebook & Google Ads management in Dallas. Vixi Agency delivers targeted campaigns, measurable ROI, and business growth. Management fees from $450/mo.",
 }
 
 export default function AdsManagementPage() {
@@ -149,7 +149,7 @@ export default function AdsManagementPage() {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold text-primary-blue mb-2">Ads Launchpad</h3>
                 <p className="text-gray-600 mb-4 text-sm h-16">Ideal for businesses starting with paid ads or focusing on one primary platform with a smaller budget.</p>
-                <p className="text-4xl font-bold text-gray-800">$650<span className="text-xl font-normal text-gray-500">/mo Mgmt Fee</span></p>
+                <p className="text-4xl font-bold text-gray-800">$450<span className="text-xl font-normal text-gray-500">/mo Mgmt Fee</span></p>
                 <p className="text-sm text-gray-500 mt-1">+ Your Ad Spend Budget</p>
               </div>
               <ul className="space-y-3 mb-8 text-sm flex-grow">

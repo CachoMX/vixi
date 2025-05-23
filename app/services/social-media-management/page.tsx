@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Dallas Social Media Management Services | Grow Your Brand | Vixi Agency",
-  description: "Boost your Dallas business with Vixi Agency's expert social media management. Strategic content, engaging posts, real results. Packages from $525/month.",
+  description: "Boost your Dallas business with Vixi Agency's expert social media management. Strategic content, engaging posts, real results. Packages from $435/month.",
 }
 
 export default function SocialMediaPage() {
@@ -145,7 +145,7 @@ export default function SocialMediaPage() {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold text-primary-blue mb-2">Social Starter</h3>
                 <p className="text-gray-600 mb-4 text-sm h-16">Great for businesses new to social media or needing a consistent foundational presence.</p>
-                <p className="text-4xl font-bold text-gray-800">$525<span className="text-xl font-normal text-gray-500">/month</span></p>
+                <p className="text-4xl font-bold text-gray-800">$435<span className="text-xl font-normal text-gray-500">/month</span></p>
               </div>
               <ul className="space-y-3 mb-8 text-sm flex-grow">
                 {starterFeatures.map((feature, index) => (
@@ -169,7 +169,7 @@ export default function SocialMediaPage() {
               <div className="mb-6 pt-4">
                 <h3 className="text-2xl font-semibold text-primary-blue mb-2">Social Growth</h3>
                 <p className="text-gray-600 mb-4 text-sm h-16">Designed for businesses looking to actively grow their engagement and reach across multiple platforms.</p>
-                <p className="text-4xl font-bold text-gray-800">$950<span className="text-xl font-normal text-gray-500">/month</span></p>
+                <p className="text-4xl font-bold text-gray-800">$750<span className="text-xl font-normal text-gray-500">/month</span></p>
               </div>
               <ul className="space-y-3 mb-8 text-sm flex-grow">
                 {growthFeatures.map((feature, index) => (
@@ -192,7 +192,7 @@ export default function SocialMediaPage() {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold text-primary-blue mb-2">Social Pro</h3>
                 <p className="text-gray-600 mb-4 text-sm h-16">Our most comprehensive package for businesses serious about maximizing their social media impact and ROI.</p>
-                <p className="text-4xl font-bold text-gray-800">$1625<span className="text-xl font-normal text-gray-500">/month</span></p>
+                <p className="text-4xl font-bold text-gray-800">$1325<span className="text-xl font-normal text-gray-500">/month</span></p>
               </div>
               <ul className="space-y-3 mb-8 text-sm flex-grow">
                 {proFeatures.map((feature, index) => (

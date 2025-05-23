@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Monthly Graphic Design Services Dallas | Eye-Catching Visuals | Vixi Agency",
-  description: "Affordable monthly graphic design packages in Dallas by Vixi Agency. Get consistent, professional social media graphics and more from $325/month.",
+  description: "Affordable monthly graphic design packages in Dallas by Vixi Agency. Get consistent, professional social media graphics and more from $199/month.",
 }
 
 export default function GraphicDesignPage() {
@@ -133,7 +133,7 @@ export default function GraphicDesignPage() {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold text-primary-blue mb-2">Visual Spark</h3>
                 <p className="text-gray-600 mb-4 text-sm h-16 md:h-20">Perfect for maintaining a consistent visual presence on your key social media channels.</p>
-                <p className="text-4xl font-bold text-gray-800">$325<span className="text-xl font-normal text-gray-500">/month</span></p>
+                <p className="text-4xl font-bold text-gray-800">$199<span className="text-xl font-normal text-gray-500">/month</span></p>
               </div>
               <ul className="space-y-3 mb-8 text-sm flex-grow">
                 {visualSparkFeatures.map((feature, index) => (

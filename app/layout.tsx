@@ -236,7 +236,7 @@ const services = [
     title: "Website Design & Maintenance",
     href: "/services/website-design",
     description: "Custom WordPress websites with ongoing support",
-    label: "Starting at $325/mo",
+    label: "Starting at $199/mo",
     isNew: false,
   },
   {
@@ -250,14 +250,14 @@ const services = [
     title: "Ads Management",
     href: "/services/ads-management",
     description: "Expert Facebook & Google Ads management",
-    label: "Starting at $650/mo",
+    label: "Starting at $450/mo",
     isNew: false,
   },
   {
     title: "Monthly Graphic Design",
     href: "/services/monthly-graphic-design",
     description: "Professional design services on a monthly retainer",
-    label: "Starting at $325/mo",
+    label: "Starting at $199/mo",
     isNew: false,
   },
   {

@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export const metadata = {
   title: "Digital Marketing Packages Dallas | Vixi Agency | Transparent Pricing",
-  description: "Explore Vixi Agency's digital marketing packages in Dallas. Affordable, high-value solutions for website design, SEO, social media, ads, and graphic design. View our plans and get started today!",
+  description: "Explore Vixi Agency's digital marketing packages in Dallas. Affordable, high-value solutions for website design (monthly or one-time), SEO, social media, ads, and graphic design. View our plans!",
 }
 
 // Define TypeScript interfaces for better type safety (optional but recommended)
@@ -33,30 +33,39 @@ interface ServiceCategoryInfo {
 
 
 // Define package data centrally for easier management
-const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
+const serviceCategories: ServiceCategoryInfo[] = [ 
   {
     categoryTitle: "Website Design & Maintenance",
-    categoryDescription: "Professional WordPress websites built for performance and maintained for peace of mind. Perfect for Dallas businesses looking for a strong online foundation.",
-    servicePageLink: "/services/website-design",
+    categoryDescription: "Professional WordPress websites built for performance. Choose from ongoing monthly care plans or a comprehensive one-time design & launch. Perfect for Dallas businesses.",
+    servicePageLink: "/services/website-design-maintenance", // Ensure this URL is correct
     packages: [
       {
-        name: "Website Essentials",
-        price: "$325/month",
-        setupFee: "+ $500 Initiation & Setup", // Has setupFee
+        name: "Website Essentials Monthly",
+        price: "$199/month",
+        setupFee: "+ $500 Initiation & Setup", 
         description: "Robust online presence with ongoing care & 1 monthly blog post.",
         features: ["Up to 10 Pages", "1 SEO Blog Post/Mo", "Content Updates (2.5hrs)", "Full Maintenance"],
-        ctaLink: "/contact?service=website-essentials",
+        ctaLink: "/contact?package=website-essentials",
         ctaText: "Choose Essentials",
       },
       {
-        name: "Website Growth",
-        price: "$575/month",
-        setupFee: "+ $500 Initiation & Setup", // Has setupFee
+        name: "Website Growth Monthly",
+        price: "$425/month",
+        setupFee: "+ $500 Initiation & Setup", 
         description: "Enhanced content strategy, more updates, and in-depth support.",
         features: ["Up to 20 Pages", "1-2 SEO Blog Posts/Mo", "Content Updates (4-5hrs)", "Advanced Maintenance"],
-        ctaLink: "/contact?service=website-growth",
+        ctaLink: "/contact?package=website-growth",
         ctaText: "Choose Growth",
         popular: true,
+      },
+      {
+        name: "Website Design & Launch",
+        price: "Starting at $2,500",
+        priceSuffix: "One-Time Payment",
+        description: "A comprehensive one-time build for full ownership of your new website.",
+        features: ["Up to 15 Pages (baseline)", "Custom-Feel Design", "SEO Foundation", "CMS Training", "Professional Launch"],
+        ctaLink: "/contact?service=one-time-website-build",
+        ctaText: "Get Project Quote",
       },
     ],
   },
@@ -67,8 +76,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
     packages: [
       {
         name: "Social Starter",
-        price: "$525/month",
-        // No setupFee, No priceSuffix
+        price: "$435/month",
         description: "Consistent foundational presence on 1-2 platforms.",
         features: ["1-2 Platforms", "2-3 Posts/Week/Platform", "Custom Graphics", "Basic Reporting"],
         ctaLink: "/contact?package=social-starter",
@@ -76,8 +84,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       },
       {
         name: "Social Growth",
-        price: "$950/month",
-        // No setupFee, No priceSuffix
+        price: "$750/month",
         description: "Actively grow engagement across 2-3 platforms with more content.",
         features: ["2-3 Platforms", "3-4 Posts/Week/Platform", "Story Creation", "Detailed Reporting"],
         ctaLink: "/contact?package=social-growth",
@@ -86,8 +93,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       },
       {
         name: "Social Pro",
-        price: "$1625/month",
-        // No setupFee, No priceSuffix
+        price: "$1325/month",
         description: "Comprehensive management for maximum social media impact & ROI.",
         features: ["3-4 Platforms", "4-5+ Posts/Week/Platform", "Advanced Content", "Strategy Calls"],
         ctaLink: "/contact?package=social-pro",
@@ -103,9 +109,8 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
     packages: [
       {
         name: "Ads Launchpad",
-        price: "$650/mo",
-        priceSuffix: "Mgmt Fee + Ad Spend", // Has priceSuffix
-        // No setupFee directly on package, it's a category note
+        price: "$450/mo",
+        priceSuffix: "Mgmt Fee + Ad Spend", 
         description: "Ideal for starting with paid ads on one primary platform.",
         features: ["1 Ad Platform", "For Ad Spends ~$1k-$2.5k/mo", "Full Campaign Setup & Mgmt", "Monthly Reporting"],
         ctaLink: "/contact?package=ads-launchpad",
@@ -114,7 +119,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       {
         name: "Ads Accelerator",
         price: "$1175/mo",
-        priceSuffix: "Mgmt Fee + Ad Spend", // Has priceSuffix
+        priceSuffix: "Mgmt Fee + Ad Spend", 
         description: "Scale across 1-2 platforms with more aggressive growth targets.",
         features: ["1-2 Ad Platforms", "For Ad Spends ~$2.5k-$7.5k/mo", "A/B Testing", "Detailed Reporting"],
         ctaLink: "/contact?package=ads-accelerator",
@@ -124,7 +129,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       {
         name: "Ads Dominator",
         price: "Starting at $2250/mo",
-        priceSuffix: "Mgmt Fee + Ad Spend", // Has priceSuffix
+        priceSuffix: "Mgmt Fee + Ad Spend", 
         description: "Comprehensive multi-platform management for market leadership.",
         features: ["2-3+ Ad Platforms", "For Ad Spends $7.5k+/mo", "Advanced Strategies", "Strategy Calls"],
         ctaLink: "/contact?package=ads-dominator",
@@ -139,8 +144,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
     packages: [
       {
         name: "Visual Spark",
-        price: "$325/month",
-        // No setupFee, No priceSuffix
+        price: "$199/month",
         description: "Maintain a consistent visual presence on key social channels.",
         features: ["Up to 4 Quick Social Graphics", "2 Revisions/Graphic", "Source Files Included", "Brand Aligned"],
         ctaLink: "/contact?package=visual-spark",
@@ -148,8 +152,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       },
       {
         name: "Visual Boost",
-        price: "$600/month",
-        // No setupFee, No priceSuffix
+        price: "$500/month",
         description: "For more active channels or diverse digital marketing visual needs.",
         features: ["Up to 10 Quick Social Graphics", "2 Revisions/Graphic", "Source Files Included", "Versatile Use"],
         ctaLink: "/contact?package=visual-boost",
@@ -166,8 +169,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       {
         name: "Hyros Setup Service",
         price: "$500",
-        priceSuffix: "One-Time Fee", // Has priceSuffix
-        // No setupFee
+        priceSuffix: "One-Time Fee", 
         description: "Expert implementation of Hyros for accurate ad tracking and reliable data.",
         features: ["Initial Consultation", "Account Configuration", "Tracking Script Guidance", "Integration Check"],
         ctaLink: "/contact?service=hyros-setup",
@@ -176,8 +178,7 @@ const serviceCategories: ServiceCategoryInfo[] = [ // Added type annotation
       {
         name: "Marketing Automation Consulting",
         price: "Custom",
-        priceSuffix: "Monthly Retainer", // Has priceSuffix
-        // No setupFee
+        priceSuffix: "Monthly Retainer", 
         description: "Tailored automation strategies to streamline workflows and scale operations.",
         features: ["Custom Strategy", "Workflow Design", "Platform Integration", "Ongoing Support"],
         ctaLink: "/contact?service=automation-consulting",
@@ -223,7 +224,7 @@ export default function PackagesPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">{category.categoryDescription}</p>
               {category.setupFeeNote && <p className="text-sm text-gray-500 mt-3">{category.setupFeeNote}</p>}
             </div>
-            <div className={`grid grid-cols-1 md:grid-cols-2 ${category.packages.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-8 max-w-7xl mx-auto`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 ${category.packages.length >= 3 ? 'lg:grid-cols-3' : (category.packages.length === 2 ? 'lg:grid-cols-2 max-w-5xl' : 'lg:grid-cols-1 max-w-2xl')} gap-8 mx-auto`}>
               {category.packages.map((pkg) => (
                 <Card key={pkg.name} className={`flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-300 ${pkg.popular ? 'border-2 border-primary-blue' : 'border border-gray-200'}`}>
                   {pkg.popular && (
@@ -231,13 +232,11 @@ export default function PackagesPage() {
                       MOST POPULAR
                     </div>
                   )}
-                  <CardHeader className={`pt-8 ${pkg.popular ? 'pt-12' : 'pt-8'}`}> {/* Adjusted padding for popular badge */}
+                  <CardHeader className={`pt-8 ${pkg.popular ? 'pt-12' : 'pt-8'}`}>
                     <CardTitle className="text-2xl font-semibold text-primary-blue mb-2 text-center">{pkg.name}</CardTitle>
                     <div className="text-center mb-3">
                         <span className="text-4xl font-bold text-gray-800">{pkg.price}</span>
-                        {/* Conditional rendering for priceSuffix */}
                         {pkg.priceSuffix && <span className="text-lg font-normal text-gray-500"> {pkg.priceSuffix}</span>}
-                        {/* Conditional rendering for setupFee */}
                         {pkg.setupFee && <p className="text-xs text-gray-500 mt-1">{pkg.setupFee}</p>}
                     </div>
                     <CardDescription className="text-gray-600 text-sm text-center h-12">{pkg.description}</CardDescription>

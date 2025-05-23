@@ -107,8 +107,7 @@ export default function AdsManagementPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              {/* Add an illustrative image here - e.g., ad performance dashboard, targeting graphic */}
-              <img src="/placeholder-ads-approach.jpg" alt="Data-driven ad campaign management" className="rounded-lg shadow-md" />
+                <img src="/images/data-driven-ad-campaign-strategy.webp" alt="Data-driven ad campaign management" className="rounded-lg shadow-md" />
             </div>
             <div className="space-y-6">
               {[

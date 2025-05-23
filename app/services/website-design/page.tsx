@@ -102,7 +102,7 @@ export default function WebsiteDesignPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <Image 
-                src="/images/website-design-process-dallas.jpg" // REPLACE with your actual image
+                src="/images/website-design-process-dallas.webp" // REPLACE with your actual image
                 alt="Modern website design and development process at Vixi Agency Dallas" 
                 width={600} 
                 height={450} 

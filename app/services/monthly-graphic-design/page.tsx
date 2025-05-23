@@ -91,9 +91,8 @@ export default function GraphicDesignPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              {/* Add an illustrative image here - e.g., design process, examples of social graphics */}
-              <img src="/placeholder-design-approach.jpg" alt="Creative graphic design process" className="rounded-lg shadow-md" />
+            <div>              
+              <img src="/images/graphic-design-process-vixi-agency.webp" alt="Creative graphic design process" className="rounded-lg shadow-md" />
             </div>
             <div className="space-y-6">
               {[

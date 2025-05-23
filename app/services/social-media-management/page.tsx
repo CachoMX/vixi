@@ -103,9 +103,8 @@ export default function SocialMediaPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              {/* Add an illustrative image here - e.g., social media icons, engagement examples */}
-              <img src="/placeholder-social-approach.jpg" alt="Strategic social media planning" className="rounded-lg shadow-md" />
+            <div>              
+              <img src="/images/strategic-social-media-planning-vixi-agency.webp" alt="Strategic social media planning" className="rounded-lg shadow-md" />
             </div>
             <div className="space-y-6">
               {[

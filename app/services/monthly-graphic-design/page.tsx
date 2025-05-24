@@ -92,7 +92,7 @@ export default function GraphicDesignPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>              
-              <img src="/images/graphic-design-process-vixi-agency.webp" alt="Creative graphic design process" className="rounded-lg shadow-md" />
+              <img src="/images/graphic-design-process-vixi.webp" alt="Creative graphic design process" className="rounded-lg shadow-md" />
             </div>
             <div className="space-y-6">
               {[

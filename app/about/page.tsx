@@ -51,9 +51,8 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              {/* Placeholder for an image of the Vixi team or an abstract representing their journey */}
-              <Image src="/placeholder-story.jpg" alt="Vixi Agency Team or Concept" width={600} height={400} className="rounded-lg shadow-xl mx-auto" />
+            <div>              
+              <Image src="/images/about-vixi-team-dallas.webp" alt="About us at Vixi Agency – digital strategists, designers, and growth specialists" width={600} height={400} className="rounded-lg shadow-xl mx-auto" />
             </div>
             <div className="max-w-xl">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">

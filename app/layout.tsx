@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://vixi.agency'),
   title: {
     default: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
-    template: "%s | Vixi Agency"
+    template: "%s"
   },
   description: "Transform your digital presence with Vixi's comprehensive marketing solutions. Expert web development, social media, and advertising services for businesses in Dallas and worldwide.",
   manifest: '/images/manifest.json',

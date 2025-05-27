@@ -342,12 +342,13 @@ export default function HomePage() {
             </p>
             <Button 
               size="lg" 
-              className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-xl text-xl px-12 py-4 font-bold" 
+              className="bg-white text-primary-blue hover:bg-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-xl text-lg sm:text-xl px-6 sm:px-12 py-4 font-bold w-full sm:w-auto" 
               asChild 
             >
               <Link href="/contact?interest=homepage-cta">
-                Get Your Free Growth Strategy Session
-                <ArrowRight className="ml-3 h-6 w-6" />
+                <span className="block sm:hidden">Get Your Free Strategy</span>
+                <span className="hidden sm:block">Get Your Free Growth Strategy Session</span>
+                <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
               </Link>
             </Button>
           </div>

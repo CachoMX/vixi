@@ -12,10 +12,17 @@ import Script from 'next/script'
 import { SocialIcons } from '@/components/social-icons'
 import { NewsletterForm } from '@/components/newsletter-form'
 import { ChevronDown } from 'lucide-react'
+import type { Metadata, Viewport } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
+}
+
+export const metadata: Metadata = {  
   metadataBase: new URL('https://vixi.agency'),
   title: {
     default: "Vixi Agency | Dallas Digital Marketing & Advertising Experts",
@@ -42,8 +49,7 @@ export const metadata: Metadata = {
       { url: '/images/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
       { url: '/images/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' }
     ]
-  },
-  themeColor: '#ffffff',
+  },  
   other: {
     "msapplication-TileColor": "#ffffff",
     "msapplication-TileImage": "/images/ms-icon-144x144.png"
